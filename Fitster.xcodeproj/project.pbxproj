@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076332912C372A2800CCC2A4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076332902C372A2800CCC2A4 /* TabBarViewController.swift */; };
 		07C1B5662C36FFD800F7AD86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1B5652C36FFD800F7AD86 /* AppDelegate.swift */; };
 		07C1B5682C36FFD800F7AD86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1B5672C36FFD800F7AD86 /* SceneDelegate.swift */; };
 		07C1B56A2C36FFD800F7AD86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1B5692C36FFD800F7AD86 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		076332902C372A2800CCC2A4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		07C1B5622C36FFD800F7AD86 /* Fitster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C1B5652C36FFD800F7AD86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07C1B5672C36FFD800F7AD86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				07C1B5652C36FFD800F7AD86 /* AppDelegate.swift */,
 				07C1B5672C36FFD800F7AD86 /* SceneDelegate.swift */,
 				07C1B5692C36FFD800F7AD86 /* ViewController.swift */,
+				076332902C372A2800CCC2A4 /* TabBarViewController.swift */,
 				07C1B56B2C36FFD800F7AD86 /* Main.storyboard */,
 				07C1B56E2C36FFD900F7AD86 /* Assets.xcassets */,
 				07C1B5702C36FFD900F7AD86 /* LaunchScreen.storyboard */,
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076332912C372A2800CCC2A4 /* TabBarViewController.swift in Sources */,
 				07C1B56A2C36FFD800F7AD86 /* ViewController.swift in Sources */,
 				07C1B5662C36FFD800F7AD86 /* AppDelegate.swift in Sources */,
 				07C1B5682C36FFD800F7AD86 /* SceneDelegate.swift in Sources */,
