@@ -22,39 +22,39 @@
                                 <rect key="frame" x="0.0" y="93" width="393" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mdU-aS-jiR">
-                                    <size key="itemSize" width="393" height="353"/>
+                                    <size key="itemSize" width="393" height="479"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SavedEx" id="4p8-Qr-lQk" customClass="SavedExercisesCollectionViewCell" customModule="Fitster" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="353"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="479"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mcK-mg-8js">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="353"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="479"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Присед" id="YCS-gV-fey">
+                                                    <rect key="frame" x="0.0" y="8" width="393" height="257"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Упражнение:Присед" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT6-cJ-EOt">
-                                                    <rect key="frame" x="15" y="157" width="201" height="118"/>
+                                                    <rect key="frame" x="23" y="250" width="201" height="118"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Каллорий потрачено: 123" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-8R-UHx">
-                                                    <rect key="frame" x="224" y="157" width="161" height="100"/>
+                                                    <rect key="frame" x="232" y="250" width="161" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Присед" id="YCS-gV-fey">
-                                                    <rect key="frame" x="40" y="8" width="309" height="173"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Дата и время: 2024-07-05 17:07:35" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYd-I2-1r9">
-                                                    <rect key="frame" x="9" y="247" width="370" height="106"/>
+                                                    <rect key="frame" x="17" y="340" width="370" height="106"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
@@ -62,7 +62,7 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="393" height="353"/>
+                                        <size key="customSize" width="393" height="479"/>
                                         <connections>
                                             <outlet property="calloriesExercise" destination="Rsn-8R-UHx" id="ePg-yb-XOB"/>
                                             <outlet property="imageExercise" destination="YCS-gV-fey" id="uF6-Oq-Wlu"/>
