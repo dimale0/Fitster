@@ -9,21 +9,27 @@ import UIKit
 
 class SavedExercisesViewController: UIViewController {
     @IBOutlet weak var fininshedExercises: UICollectionView!
+    
     var finishedExercises: [Exercise] = []
+    
+    var selectedDate: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fininshedExercises.dataSource = self
         fininshedExercises.delegate = self
-        fininshedExercises.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         finishedExercises = MockData.shared.finishedExercises
-        print("Finished Exercises: \(finishedExercises)")
+        filterExercisesByDate(selectedDate)
         fininshedExercises.reloadData()
-        
+    }
+    
+   
+    func filterExercisesByDate(_ date: String) {
+        finishedExercises = MockData.shared.finishedExercises.filter { $0.time.hasPrefix(date) }
     }
 }
 
