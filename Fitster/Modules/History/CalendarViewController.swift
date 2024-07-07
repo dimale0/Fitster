@@ -15,6 +15,7 @@ class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        calendarCollectionView.reloadData()
 
         
         calendarCollectionView.dataSource = self
@@ -26,7 +27,6 @@ class CalendarViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
         initializeUniqueDates()
     }
     

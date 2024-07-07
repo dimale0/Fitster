@@ -170,7 +170,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <segue destination="F5x-91-iYg" kind="show" id="tps-PL-btg"/>
+                                    <segue destination="OL9-TW-mBg" kind="show" identifier="123" id="ame-c3-MQP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,16 +191,6 @@
             </objects>
             <point key="canvasLocation" x="2602.290076335878" y="-35.211267605633807"/>
         </scene>
-        <!--HistoryStoryboard-->
-        <scene sceneID="stl-YE-Qp7">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HistoryStoryboard" id="F5x-91-iYg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="tGg-Mj-ang"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qi-QN-pr6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3341" y="-35"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="m2J-uL-U9C">
             <objects>
@@ -220,9 +210,60 @@
             </objects>
             <point key="canvasLocation" x="145.80152671755724" y="-35.211267605633807"/>
         </scene>
+        <!--Callories View Controller-->
+        <scene sceneID="ADD-9h-d1V">
+            <objects>
+                <viewController id="OL9-TW-mBg" customClass="CalloriesViewController" customModule="Fitster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xCS-1h-LE1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="соженные каллории" translatesAutoresizingMaskIntoConstraints="NO" id="OyQ-zj-NDR">
+                                <rect key="frame" x="0.0" y="175" width="393" height="151"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o8Y-xK-muj">
+                                <rect key="frame" x="50" y="529" width="293" height="37.333333333333371"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1d-ON-8XC">
+                                <rect key="frame" x="50" y="648" width="293" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Готово"/>
+                                <connections>
+                                    <action selector="Dismiss:" destination="OL9-TW-mBg" eventType="touchUpInside" id="Pp0-bp-X9a"/>
+                                    <action selector="SaveButton:" destination="OL9-TW-mBg" eventType="touchUpInside" id="kW1-cd-zEW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="De8-Ut-r4O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S1d-ON-8XC" firstAttribute="top" secondItem="o8Y-xK-muj" secondAttribute="bottom" constant="81.670000000000002" id="3V5-o3-aoC"/>
+                            <constraint firstItem="OyQ-zj-NDR" firstAttribute="leading" secondItem="De8-Ut-r4O" secondAttribute="leading" id="7zg-Kw-Y8I"/>
+                            <constraint firstItem="De8-Ut-r4O" firstAttribute="trailing" secondItem="S1d-ON-8XC" secondAttribute="trailing" constant="50" id="8Gm-V0-OrE"/>
+                            <constraint firstItem="De8-Ut-r4O" firstAttribute="trailing" secondItem="o8Y-xK-muj" secondAttribute="trailing" constant="50" id="AAR-A2-k5D"/>
+                            <constraint firstItem="S1d-ON-8XC" firstAttribute="leading" secondItem="De8-Ut-r4O" secondAttribute="leading" constant="50" id="Gl7-8z-G9g"/>
+                            <constraint firstItem="OyQ-zj-NDR" firstAttribute="trailing" secondItem="De8-Ut-r4O" secondAttribute="trailing" id="Hd2-Gx-DXZ"/>
+                            <constraint firstItem="o8Y-xK-muj" firstAttribute="leading" secondItem="De8-Ut-r4O" secondAttribute="leading" constant="50" id="RfQ-Jd-O3F"/>
+                            <constraint firstItem="o8Y-xK-muj" firstAttribute="top" secondItem="OyQ-zj-NDR" secondAttribute="bottom" constant="203" id="h4f-o3-RRH"/>
+                            <constraint firstItem="OyQ-zj-NDR" firstAttribute="top" secondItem="De8-Ut-r4O" secondAttribute="top" constant="72" id="xp1-O3-Qlm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QmH-nh-5Cx"/>
+                    <connections>
+                        <outlet property="CalloriesTextField" destination="o8Y-xK-muj" id="Lxd-xZ-rbv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eb5-xX-op9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3476" y="-35"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dumbbell.fill" catalog="system" width="128" height="72"/>
+        <image name="соженные каллории" width="780" height="151"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

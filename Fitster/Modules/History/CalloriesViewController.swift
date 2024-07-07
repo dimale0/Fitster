@@ -6,33 +6,9 @@
 //
 
 import UIKit
-struct Exercise : Codable {
-    let id: Int
-    let title: String
-    let description: String
-    var isFinished: Bool
-    var callories:Int
-    var time: String
-    let image:String
-    
-    // ...
-}
-struct MockData {
-    static var shared = MockData()
-
-    let exercises: [Exercise] = [
-        Exercise(id: 1, title: "Ноги", description: "Присед", isFinished: false, callories: 0, time: "", image: "Присед")
-    ]
-
-    var finishedExercises: [Exercise] {
-        return ExerciseManager.shared.loadExercises()
-    }
-
-  
-}
-
 class CalloriesViewController: UIViewController {
-    let idEx = 1;
+    var idEx: Int!
+    
     @IBOutlet weak var CalloriesTextField: UITextField!
     @IBAction func SaveButton(_ sender: Any) {
         if let exerciseIndex = MockData.shared.exercises.firstIndex(where: { $0.id == idEx }) {
@@ -54,16 +30,9 @@ class CalloriesViewController: UIViewController {
             
         }
         
-        
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
-        
+    @IBAction func Dismiss(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
+    }
+
 

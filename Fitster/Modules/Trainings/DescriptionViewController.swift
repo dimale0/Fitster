@@ -22,4 +22,12 @@ class DescriptionViewController: UIViewController {
         self.imageExercise.image = UIImage(named: exercise!.image)
         self.descriptionExercise.text = exercise?.description
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "123" {
+            if let destinationVC = segue.destination as? CalloriesViewController{
+               destinationVC.idEx = exercise?.id
+            }
+        }
+    }
 }
