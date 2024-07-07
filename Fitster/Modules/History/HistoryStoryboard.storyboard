@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bb6-Ud-iiP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="paA-jk-olB">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -60,11 +60,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-63-OPU">
+                                                    <rect key="frame" x="285" y="426" width="89" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Удалить"/>
+                                                </button>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="479"/>
                                         <connections>
                                             <outlet property="calloriesExercise" destination="Rsn-8R-UHx" id="ePg-yb-XOB"/>
+                                            <outlet property="deleteButton" destination="dbc-63-OPU" id="oQI-yL-Rlk"/>
                                             <outlet property="imageExercise" destination="YCS-gV-fey" id="uF6-Oq-Wlu"/>
                                             <outlet property="nameExercise" destination="aT6-cJ-EOt" id="f0H-Ou-u0f"/>
                                             <outlet property="timeExercise" destination="eYd-I2-1r9" id="pZy-hG-xWB"/>
@@ -94,7 +101,7 @@
                     <navigationItem key="navigationItem" id="uym-RM-Hgc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="fininshedExercises" destination="KcI-k6-r5L" id="7WN-sV-bZF"/>
+                        <outlet property="finishedExercisesCollectionView" destination="KcI-k6-r5L" id="8YC-A8-3Bf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

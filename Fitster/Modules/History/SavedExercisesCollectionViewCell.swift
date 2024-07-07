@@ -12,6 +12,7 @@ class SavedExercisesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var timeExercise: UILabel!
     @IBOutlet weak var calloriesExercise: UILabel!
     @IBOutlet weak var nameExercise: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var imageExercise: UIImageView!
     override func prepareForReuse() {
         super.prepareForReuse()

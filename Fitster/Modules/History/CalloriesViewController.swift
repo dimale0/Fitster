@@ -6,7 +6,7 @@
 //
 
 import UIKit
-struct Exercise {
+struct Exercise : Codable {
     let id: Int
     let title: String
     let description: String
@@ -18,19 +18,19 @@ struct Exercise {
     // ...
 }
 struct MockData {
-    
     static var shared = MockData()
-    let exercises: [Exercise] = [Exercise(id: 1, title: "Ноги", description:"Присед" , isFinished: false, callories: 0,time: "",image: "Присед")]
-    var finishedExercises: [Exercise] = [
-            Exercise(id: 1, title: "Приседания", description: "Приседания со штангой", isFinished: true, callories: 150, time: "2024-07-05 01-01-01", image: "squats"),
-            Exercise(id: 2, title: "Отжимания", description: "Отжимания на брусьях", isFinished: true, callories: 100, time: "2024-07-05 01-01-01", image: "pushups"),
-            Exercise(id: 3, title: "Подтягивания", description: "Подтягивания на перекладине", isFinished: true, callories: 200, time: "2024-07-06 01-01-01", image: "pullups"),
-            Exercise(id: 4, title: "Планка", description: "Удержание планки на прессе", isFinished: true, callories: 50, time: "2024-07-07 01-01-01", image: "plank"),
-            Exercise(id: 5, title: "Пресс", description: "Скручивания на прессе", isFinished: true, callories: 80, time: "2024-07-07 01-01-01", image: "abs")
-        ]
-    
-    
+
+    let exercises: [Exercise] = [
+        Exercise(id: 1, title: "Ноги", description: "Присед", isFinished: false, callories: 0, time: "", image: "Присед")
+    ]
+
+    var finishedExercises: [Exercise] {
+        return ExerciseManager.shared.loadExercises()
+    }
+
+  
 }
+
 class CalloriesViewController: UIViewController {
     let idEx = 1;
     @IBOutlet weak var CalloriesTextField: UITextField!
@@ -44,7 +44,7 @@ class CalloriesViewController: UIViewController {
                                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                                let currentTime = dateFormatter.string(from: Date())
                                exercise.time = currentTime
-                MockData.shared.finishedExercises.append(exercise)
+                ExerciseManager.shared.addExercise(exercise)
                 
             }
         }

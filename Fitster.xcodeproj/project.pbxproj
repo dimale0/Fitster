@@ -17,6 +17,7 @@
 		07C1B57E2C37011900F7AD86 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C1B57D2C37011900F7AD86 /* MainStoryboard.storyboard */; };
 		07C1B5802C37012800F7AD86 /* HistoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C1B57F2C37012800F7AD86 /* HistoryStoryboard.storyboard */; };
 		07C1B5822C37013C00F7AD86 /* TrainingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C1B5812C37013C00F7AD86 /* TrainingsStoryboard.storyboard */; };
+		8D5877472C39A3EE005C9204 /* ExersiseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5877462C39A3EE005C9204 /* ExersiseManager.swift */; };
 		8D8C88932C37349100C5C9D5 /* CalloriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C88922C37349100C5C9D5 /* CalloriesViewController.swift */; };
 		8D8C88952C38106D00C5C9D5 /* SavedExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C88942C38106D00C5C9D5 /* SavedExercisesViewController.swift */; };
 		8D8C88992C38180600C5C9D5 /* SavedExercisesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C88982C38180600C5C9D5 /* SavedExercisesCollectionViewCell.swift */; };
@@ -37,6 +38,7 @@
 		07C1B57D2C37011900F7AD86 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		07C1B57F2C37012800F7AD86 /* HistoryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryStoryboard.storyboard; sourceTree = "<group>"; };
 		07C1B5812C37013C00F7AD86 /* TrainingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingsStoryboard.storyboard; sourceTree = "<group>"; };
+		8D5877462C39A3EE005C9204 /* ExersiseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExersiseManager.swift; sourceTree = "<group>"; };
 		8D8C88922C37349100C5C9D5 /* CalloriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloriesViewController.swift; sourceTree = "<group>"; };
 		8D8C88942C38106D00C5C9D5 /* SavedExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedExercisesViewController.swift; sourceTree = "<group>"; };
 		8D8C88982C38180600C5C9D5 /* SavedExercisesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedExercisesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				8D8C88982C38180600C5C9D5 /* SavedExercisesCollectionViewCell.swift */,
 				8D8C889A2C384AAB00C5C9D5 /* CalendarViewController.swift */,
 				8D8C889C2C384BC700C5C9D5 /* CalendarCollectionViewCell.swift */,
+				8D5877462C39A3EE005C9204 /* ExersiseManager.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				8D8C88952C38106D00C5C9D5 /* SavedExercisesViewController.swift in Sources */,
 				076332912C372A2800CCC2A4 /* TabBarViewController.swift in Sources */,
 				07C1B56A2C36FFD800F7AD86 /* ViewController.swift in Sources */,
+				8D5877472C39A3EE005C9204 /* ExersiseManager.swift in Sources */,
 				07C1B5662C36FFD800F7AD86 /* AppDelegate.swift in Sources */,
 				8D8C889D2C384BC700C5C9D5 /* CalendarCollectionViewCell.swift in Sources */,
 				07C1B5682C36FFD800F7AD86 /* SceneDelegate.swift in Sources */,
