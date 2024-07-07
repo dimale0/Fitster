@@ -7,61 +7,6 @@
 
 import UIKit
 
-struct Training {
-    let id: Int
-    let title: String
-    let exercises: [Exercise]
-    let image: String
-    
-    // ...
-    init(id: Int, title: String, exercises: [Exercise], image: String) {
-        self.id = id
-        self.title = title
-        self.exercises = exercises
-        self.image = image
-    }
-}
-
-struct Exercise : Codable {
-    let id: Int
-    let title: String
-    let description: String
-    var isFinished: Bool
-    var callories:Int
-    var time: String
-    let image:String
-    
-    init(id: Int, title: String, description: String, isFinished: Bool, callories: Int, time: String, image: String) {
-        self.id = id
-        self.title = title
-        self.description = description
-        self.isFinished = isFinished
-        self.callories = callories
-        self.time = time
-        self.image = image
-    }
-}
-
-struct MockData {
-    static let shared = MockData()
-    
-    let trainings: [Training] = [
-        Training(id: 1, title: "Ноги", exercises: [
-            Exercise(id: 1, title: "Присяд", description: "...", isFinished: false, callories: 0, time: "", image: "ноги"),
-            Exercise(id: 1, title: "Присяд", description: "...", isFinished: false, callories: 0, time: "", image: "ноги")
-        ], image: "ноги")
-    ]
-    
-    let exercises: [Exercise] = [
-        Exercise(id: 1, title: "Ноги", description: "Присед", isFinished: false, callories: 0, time: "", image: "Присед")
-    ]
-
-    var finishedExercises: [Exercise] {
-        return ExerciseManager.shared.loadExercises()
-    }
-    
-}
-
 class TrainingsViewController: UIViewController {
     
     let trainings = MockData.shared.trainings
@@ -87,6 +32,9 @@ extension TrainingsViewController: UITableViewDataSource, UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         150
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

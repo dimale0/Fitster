@@ -13,6 +13,9 @@
 		071DF4D62C38860C0026A0DF /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DF4D52C38860C0026A0DF /* DescriptionViewController.swift */; };
 		071DF4D82C3961D90026A0DF /* ExercisesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DF4D72C3961D90026A0DF /* ExercisesTableViewCell.swift */; };
 		076332912C372A2800CCC2A4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076332902C372A2800CCC2A4 /* TabBarViewController.swift */; };
+		0767C7592C3B192000C2A81D /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767C7582C3B192000C2A81D /* Training.swift */; };
+		0767C75B2C3B193D00C2A81D /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767C75A2C3B193D00C2A81D /* Exercise.swift */; };
+		0767C75D2C3B195000C2A81D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767C75C2C3B195000C2A81D /* MockData.swift */; };
 		07C1B5662C36FFD800F7AD86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1B5652C36FFD800F7AD86 /* AppDelegate.swift */; };
 		07C1B5682C36FFD800F7AD86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1B5672C36FFD800F7AD86 /* SceneDelegate.swift */; };
 		07C1B56A2C36FFD800F7AD86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C1B5692C36FFD800F7AD86 /* ViewController.swift */; };
@@ -37,6 +40,9 @@
 		071DF4D52C38860C0026A0DF /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		071DF4D72C3961D90026A0DF /* ExercisesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewCell.swift; sourceTree = "<group>"; };
 		076332902C372A2800CCC2A4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0767C7582C3B192000C2A81D /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		0767C75A2C3B193D00C2A81D /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		0767C75C2C3B195000C2A81D /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		07C1B5622C36FFD800F7AD86 /* Fitster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C1B5652C36FFD800F7AD86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07C1B5672C36FFD800F7AD86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +73,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0767C7532C3B188700C2A81D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0767C7582C3B192000C2A81D /* Training.swift */,
+				0767C75A2C3B193D00C2A81D /* Exercise.swift */,
+				0767C75C2C3B195000C2A81D /* MockData.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		07C1B5592C36FFD800F7AD86 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +102,7 @@
 		07C1B5642C36FFD800F7AD86 /* Fitster */ = {
 			isa = PBXGroup;
 			children = (
+				0767C7532C3B188700C2A81D /* Storage */,
 				07C1B5792C3700E300F7AD86 /* Modules */,
 				07C1B5652C36FFD800F7AD86 /* AppDelegate.swift */,
 				07C1B5672C36FFD800F7AD86 /* SceneDelegate.swift */,
@@ -218,8 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0767C7592C3B192000C2A81D /* Training.swift in Sources */,
 				8D8C889B2C384AAB00C5C9D5 /* CalendarViewController.swift in Sources */,
 				8D8C88992C38180600C5C9D5 /* SavedExercisesCollectionViewCell.swift in Sources */,
+				0767C75B2C3B193D00C2A81D /* Exercise.swift in Sources */,
 				8D8C88952C38106D00C5C9D5 /* SavedExercisesViewController.swift in Sources */,
 				076332912C372A2800CCC2A4 /* TabBarViewController.swift in Sources */,
 				071DF4D42C381C0B0026A0DF /* TrainingsTableViewCell.swift in Sources */,
@@ -229,7 +248,7 @@
 				071DF4CE2C3819890026A0DF /* TrainingsViewController.swift in Sources */,
 				071DF4D62C38860C0026A0DF /* DescriptionViewController.swift in Sources */,
 				8D5877472C39A3EE005C9204 /* ExersiseManager.swift in Sources */,
-
+				0767C75D2C3B195000C2A81D /* MockData.swift in Sources */,
 				07C1B5662C36FFD800F7AD86 /* AppDelegate.swift in Sources */,
 				8D8C889D2C384BC700C5C9D5 /* CalendarCollectionViewCell.swift in Sources */,
 				07C1B5682C36FFD800F7AD86 /* SceneDelegate.swift in Sources */,

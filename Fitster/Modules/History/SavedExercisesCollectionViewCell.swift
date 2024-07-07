@@ -40,7 +40,7 @@ class SavedExercisesCollectionViewCell: UICollectionViewCell {
         calloriesExercise.text = "Калорий потрачено: \(exercise.callories)"
         
        
-        nameExercise.text = "Упражнение: \(exercise.description)"
+        nameExercise.text = "Упражнение: \(exercise.title)"
         
        
         imageExercise.image = UIImage(named: exercise.image)
