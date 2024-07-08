@@ -7,7 +7,6 @@
 
 import UIKit
 
-import UIKit
 
 class SavedExercisesViewController: UIViewController {
     @IBOutlet weak var finishedExercisesCollectionView: UICollectionView!
@@ -41,7 +40,7 @@ class SavedExercisesViewController: UIViewController {
         )
         
         let deleteAction = UIAlertAction(title: "Да", style: .destructive) { _ in
-            self.deleteExercise(exercise, at: indexPath)
+            self.deleteExercise(at: indexPath)
         }
         
         let cancelAction = UIAlertAction(title: "Нет", style: .cancel, handler: nil)
@@ -51,6 +50,7 @@ class SavedExercisesViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
+
 }
 
 private extension SavedExercisesViewController {
@@ -59,6 +59,7 @@ private extension SavedExercisesViewController {
         ExerciseManager.shared.saveExercises(finishedExercises)
         finishedExercisesCollectionView.deleteItems(at: [indexPath])
     }
+
 }
 
 extension SavedExercisesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -71,10 +72,12 @@ extension SavedExercisesViewController: UICollectionViewDataSource, UICollection
             return UICollectionViewCell()
         }
         cell.config(exercise: finishedExercises[indexPath.row])
-        cell.deleteButton.tag = indexPath.row // Установка тега для идентификации ячейки
+        cell.deleteButton.tag = indexPath.row
         cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
         return cell
     }
+
+
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 393, height: 479)

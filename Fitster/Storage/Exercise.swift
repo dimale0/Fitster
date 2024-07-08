@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Exercise : Codable {
+struct Exercise{
     let id: Int
     let title: String
     let description: String

@@ -8,12 +8,11 @@
 import UIKit
 
 class SavedExercisesCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var timeExercise: UILabel!
     @IBOutlet weak var calloriesExercise: UILabel!
     @IBOutlet weak var nameExercise: UILabel!
-    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var imageExercise: UIImageView!
+
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -21,12 +20,12 @@ class SavedExercisesCollectionViewCell: UICollectionViewCell {
     }
     
     func config(exercise: Exercise) {
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         if let date = dateFormatter.date(from: exercise.time) {
-            
+
             dateFormatter.locale = Locale(identifier: "ru_RU")
             dateFormatter.dateFormat = "d MMMM yyyy 'года'"
             let formattedDate = dateFormatter.string(from: date)
@@ -36,6 +35,7 @@ class SavedExercisesCollectionViewCell: UICollectionViewCell {
         }
         
         calloriesExercise.text = "Калорий потрачено: \(exercise.callories)"
+
         nameExercise.text = "Упражнение: \(exercise.title)"
         imageExercise.image = UIImage(named: exercise.image)
     }
