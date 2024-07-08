@@ -11,6 +11,7 @@ class MainPageViewController: UIViewController {
     let defaults = UserDefaults.standard
     
     var dayCalories = 0
+    var takenCaloriesString = ""
     
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
@@ -33,12 +34,7 @@ class MainPageViewController: UIViewController {
         static let isAllDataSaved = "isAllDataSaved"
         static let takenCalories = "takenCalories"
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        heightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedHeight)
-        weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
-        optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
-    }
+    
     override func viewDidLoad() {
         //UserDefaults.standard.removeObject(forKey: "isAllDataSaved")
         super.viewDidLoad()
@@ -53,6 +49,7 @@ class MainPageViewController: UIViewController {
         weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
         optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
                 
+        takenCaloriesString = defaults.string(forKey: UserDefaultsKeys.takenCalories)!
         
         guard let optionString = defaults.string(forKey: UserDefaultsKeys.selectedOption),
               let option = Option(rawValue: optionString),
@@ -60,7 +57,6 @@ class MainPageViewController: UIViewController {
               let weightString = defaults.string(forKey: UserDefaultsKeys.savedWeight),
               let ageString = defaults.string(forKey: UserDefaultsKeys.savedAge),
               let sex = defaults.string(forKey: UserDefaultsKeys.savedSex),
-              let takenCaloriesString = defaults.string(forKey: UserDefaultsKeys.takenCalories),
               let height = Double(heightString),
               let weight = Double(weightString),
               let age = Double(ageString)
@@ -105,6 +101,15 @@ class MainPageViewController: UIViewController {
             bmr *= 0.85
         }
         return Int(round(bmr))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        heightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedHeight)
+        weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
+        optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
+        caloriesLabel.text = "\(dayCalories) ккал"
+        //statisticsLabel.text = "\(takenCaloriesString) из \(dayCalories)"
     }
 }
 
