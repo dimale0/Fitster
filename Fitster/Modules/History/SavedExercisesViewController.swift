@@ -12,6 +12,13 @@ import UIKit
 class SavedExercisesViewController: UIViewController {
     @IBOutlet weak var finishedExercisesCollectionView: UICollectionView!
     
+    @objc func deleteButtonTapped(_ sender: UIButton) {
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        // TODO: Fix Fatal Error -  Index out of range
+        let exercise = finishedExercises[indexPath.row]
+        showDeleteConfirmation(for: exercise, at: indexPath)
+    }
+    
     var finishedExercises: [Exercise] = []
     var selectedDate: String!
 
@@ -28,11 +35,15 @@ class SavedExercisesViewController: UIViewController {
     }
 
     func showDeleteConfirmation(for exercise: Exercise, at indexPath: IndexPath) {
-        let alert = UIAlertController(title: "Подтвердите удаление", message: "Вы уверены, что хотите удалить это упражнение?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Подтвердите удаление", 
+                                      message: "Вы уверены, что хотите удалить это упражнение?",
+                                      preferredStyle: .alert
+        )
         
         let deleteAction = UIAlertAction(title: "Да", style: .destructive) { _ in
             self.deleteExercise(exercise, at: indexPath)
         }
+        
         let cancelAction = UIAlertAction(title: "Нет", style: .cancel, handler: nil)
         
         alert.addAction(deleteAction)
@@ -40,7 +51,9 @@ class SavedExercisesViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
-    
+}
+
+private extension SavedExercisesViewController {
     func deleteExercise(_ exercise: Exercise, at indexPath: IndexPath) {
         finishedExercises.remove(at: indexPath.row)
         ExerciseManager.shared.saveExercises(finishedExercises)
@@ -61,12 +74,6 @@ extension SavedExercisesViewController: UICollectionViewDataSource, UICollection
         cell.deleteButton.tag = indexPath.row // Установка тега для идентификации ячейки
         cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
         return cell
-    }
-
-    @objc func deleteButtonTapped(_ sender: UIButton) {
-        let indexPath = IndexPath(row: sender.tag, section: 0)
-        let exercise = finishedExercises[indexPath.row]
-        showDeleteConfirmation(for: exercise, at: indexPath)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

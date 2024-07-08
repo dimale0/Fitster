@@ -11,6 +11,16 @@ class CalendarViewController: UIViewController {
 
     @IBOutlet weak var calendarCollectionView: UICollectionView!
     
+    @objc func cellTapped(_ sender: UITapGestureRecognizer) {
+        guard let cell = sender.view as? CalendarCollectionViewCell,
+              let indexPath = calendarCollectionView.indexPath(for: cell) else {
+            return
+        }
+        
+        let selectedDate = dates[indexPath.item]
+        performSegue(withIdentifier: "showDetails", sender: selectedDate)
+    }
+    
     var dates: [String] = []
 
     override func viewDidLoad() {
@@ -30,13 +40,20 @@ class CalendarViewController: UIViewController {
         initializeUniqueDates()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            if let selectedDate = sender as? String {
+                let destinationVC = segue.destination as! SavedExercisesViewController
+                destinationVC.selectedDate = selectedDate
+            }
+        }
+    }
    
     func initializeUniqueDates() {
         let uniqueDates = Set(MockData.shared.finishedExercises.map { String($0.time.prefix(10)) })
         dates = Array(uniqueDates).sorted() 
         calendarCollectionView.reloadData()
     }
-
 }
 
 
@@ -58,27 +75,8 @@ extension CalendarViewController: UICollectionViewDataSource, UICollectionViewDe
         
         return cell
     }
-    @objc func cellTapped(_ sender: UITapGestureRecognizer) {
-        guard let cell = sender.view as? CalendarCollectionViewCell,
-              let indexPath = calendarCollectionView.indexPath(for: cell) else {
-            return
-        }
-        
-        let selectedDate = dates[indexPath.item]
-        performSegue(withIdentifier: "showDetails", sender: selectedDate)
-    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 393, height: 48)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails" {
-            if let selectedDate = sender as? String {
-                let destinationVC = segue.destination as! SavedExercisesViewController
-                destinationVC.selectedDate = selectedDate
-            }
-        }
-    }
-
-
 }

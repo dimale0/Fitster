@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-4F-vNk">
-                                <rect key="frame" x="0.0" y="131" width="393" height="638"/>
+                                <rect key="frame" x="0.0" y="147" width="393" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TrainingsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrainingsTableViewCell" rowHeight="132" id="8Ww-cV-c3x" customClass="TrainingsTableViewCell" customModule="Fitster" customModuleProvider="target">
@@ -52,6 +52,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="E89-QG-tqS" secondAttribute="bottom" constant="62" id="xas-9W-g31"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="imageTraining" destination="1D3-qi-G37" id="bes-Cr-cb7"/>
                                             <outlet property="titleTraining" destination="E89-QG-tqS" id="PqC-ec-hkI"/>
@@ -61,7 +62,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тренировки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-1A-M8d">
-                                <rect key="frame" x="55" y="78" width="283" height="36"/>
+                                <rect key="frame" x="55" y="103" width="283" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,13 +71,13 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LGb-4F-vNk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="00X-7L-zu7"/>
-                            <constraint firstItem="LGb-4F-vNk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0e3-HP-Dos"/>
-                            <constraint firstItem="LGb-4F-vNk" firstAttribute="top" secondItem="D6j-1A-M8d" secondAttribute="bottom" constant="17" id="1kp-Iz-brS"/>
-                            <constraint firstItem="D6j-1A-M8d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="55" id="6RU-o1-3hw"/>
-                            <constraint firstItem="LGb-4F-vNk" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="dBO-98-zL6"/>
-                            <constraint firstItem="D6j-1A-M8d" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="78" id="e9Y-Gx-sba"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="D6j-1A-M8d" secondAttribute="trailing" constant="55" id="ke3-Mf-pv1"/>
+                            <constraint firstItem="LGb-4F-vNk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="4fY-sO-LEH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="D6j-1A-M8d" secondAttribute="trailing" constant="55" id="Ayv-US-exH"/>
+                            <constraint firstItem="D6j-1A-M8d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="55" id="Rgp-jo-8oh"/>
+                            <constraint firstItem="LGb-4F-vNk" firstAttribute="top" secondItem="D6j-1A-M8d" secondAttribute="bottom" constant="8" symbolic="YES" id="S3O-pO-7Sc"/>
+                            <constraint firstItem="LGb-4F-vNk" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="VeR-L6-QIw"/>
+                            <constraint firstItem="LGb-4F-vNk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ey6-gV-2U0"/>
+                            <constraint firstItem="D6j-1A-M8d" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="sRf-T7-D7w"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wbU-n7-DEN">
