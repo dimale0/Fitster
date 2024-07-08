@@ -38,6 +38,7 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
 
 
     }
+  
     
     @IBAction func segmentedControlAction(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex{

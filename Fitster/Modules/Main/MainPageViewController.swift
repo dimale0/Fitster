@@ -33,7 +33,12 @@ class MainPageViewController: UIViewController {
         static let isAllDataSaved = "isAllDataSaved"
         static let takenCalories = "takenCalories"
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        heightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedHeight)
+        weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
+        optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
+    }
     override func viewDidLoad() {
         //UserDefaults.standard.removeObject(forKey: "isAllDataSaved")
         super.viewDidLoad()
