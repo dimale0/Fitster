@@ -7,7 +7,6 @@
 
 import UIKit
 
-import UIKit
 
 class SavedExercisesViewController: UIViewController {
     @IBOutlet weak var finishedExercisesCollectionView: UICollectionView!
@@ -31,7 +30,7 @@ class SavedExercisesViewController: UIViewController {
         let alert = UIAlertController(title: "Подтвердите удаление", message: "Вы уверены, что хотите удалить это упражнение?", preferredStyle: .alert)
         
         let deleteAction = UIAlertAction(title: "Да", style: .destructive) { _ in
-            self.deleteExercise(exercise, at: indexPath)
+            self.deleteExercise(at: indexPath)
         }
         let cancelAction = UIAlertAction(title: "Нет", style: .cancel, handler: nil)
         
@@ -41,21 +40,16 @@ class SavedExercisesViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func deleteExercise(_ exercise: Exercise, at indexPath: IndexPath) {
-        finishedExercises.remove(at: indexPath.row)
-        ExerciseManager.shared.saveExercises(finishedExercises)
-        finishedExercisesCollectionView.deleteItems(at: [indexPath])
-        updateDeleteButtonTags() // Обновляем теги кнопок после удаления
-    }
-
-    
-    func updateDeleteButtonTags() {
-        for (index, cell) in finishedExercisesCollectionView.visibleCells.enumerated() {
-            if let exerciseCell = cell as? SavedExercisesCollectionViewCell {
-                exerciseCell.deleteButton.tag = index
+    func deleteExercise(at indexPath: IndexPath) {
+            guard indexPath.row < finishedExercises.count else {
+                // Безопасная проверка, чтобы избежать выхода за пределы массива
+                return
             }
+            
+            finishedExercises.remove(at: indexPath.row)
+            ExerciseManager.shared.saveExercises(finishedExercises)
+            finishedExercisesCollectionView.reloadData()
         }
-    }
 }
 
 extension SavedExercisesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -68,16 +62,19 @@ extension SavedExercisesViewController: UICollectionViewDataSource, UICollection
             return UICollectionViewCell()
         }
         cell.config(exercise: finishedExercises[indexPath.row])
-        cell.deleteButton.tag = indexPath.row // Установка тега для идентификации ячейки
+        cell.deleteButton.tag = indexPath.row
         cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
         return cell
     }
 
     @objc func deleteButtonTapped(_ sender: UIButton) {
-        let indexPath = IndexPath(row: sender.tag, section: 0)
-        let exercise = finishedExercises[indexPath.row]
-        showDeleteConfirmation(for: exercise, at: indexPath)
-    }
+            let indexPath = IndexPath(row: sender.tag, section: 0)
+            guard indexPath.row < finishedExercises.count else {
+                // Безопасная проверка, чтобы избежать выхода за пределы массива
+                return
+            }
+            showDeleteConfirmation(for: finishedExercises[indexPath.row], at: indexPath)
+        }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 393, height: 479)
