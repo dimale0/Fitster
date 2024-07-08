@@ -45,6 +45,16 @@ class SavedExercisesViewController: UIViewController {
         finishedExercises.remove(at: indexPath.row)
         ExerciseManager.shared.saveExercises(finishedExercises)
         finishedExercisesCollectionView.deleteItems(at: [indexPath])
+        updateDeleteButtonTags() // Обновляем теги кнопок после удаления
+    }
+
+    
+    func updateDeleteButtonTags() {
+        for (index, cell) in finishedExercisesCollectionView.visibleCells.enumerated() {
+            if let exerciseCell = cell as? SavedExercisesCollectionViewCell {
+                exerciseCell.deleteButton.tag = index
+            }
+        }
     }
 }
 
