@@ -165,15 +165,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Опция" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaM-1Q-JWO">
-                                <rect key="frame" x="16" y="269" width="361" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="hsY-PF-oIZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш рост:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfm-Cd-nWw">
                                 <rect key="frame" x="120" y="79" width="153" height="27"/>
                                 <constraints>
@@ -208,42 +199,167 @@
                                     <segue destination="Y6W-OH-hqX" kind="show" identifier="goToInputParameters" id="zgt-fa-wqk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваша дневная норма калорий:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ8-Pp-0uz">
+                                <rect key="frame" x="30" y="413" width="333" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="HIq-fk-By0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="Ir8-gV-69N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Калории" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0B-O2-Nn3">
+                                <rect key="frame" x="16" y="448" width="361" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Опция" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSe-PB-VZL">
+                                <rect key="frame" x="16" y="269" width="361" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="статистика" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLA-7W-B3f">
+                                <rect key="frame" x="16" y="541" width="361" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-Xc-uWM">
+                                <rect key="frame" x="16" y="676" width="361" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MjJ-w8-vi8"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Добавить калории">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tDR-W2-2xl" kind="show" id="khG-Bm-IYn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SeH-eH-J5S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="e2a-Xc-uWM" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="16" id="026-we-wrE"/>
+                            <constraint firstItem="WLA-7W-B3f" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="16" id="0fm-Zq-Lyb"/>
                             <constraint firstItem="4Cs-ZL-24q" firstAttribute="top" secondItem="NXO-bE-HQn" secondAttribute="bottom" constant="8" symbolic="YES" id="1L5-QW-Ubp"/>
                             <constraint firstItem="E7c-Kg-Dtb" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="16" id="3ww-sb-RRs"/>
+                            <constraint firstItem="E7c-Kg-Dtb" firstAttribute="top" secondItem="wSe-PB-VZL" secondAttribute="bottom" constant="33" id="4cf-xB-uon"/>
+                            <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="y0B-O2-Nn3" secondAttribute="trailing" constant="16" id="9g8-94-qgp"/>
+                            <constraint firstItem="e2a-Xc-uWM" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="16" id="H0c-vF-TLv"/>
                             <constraint firstItem="Lfm-Cd-nWw" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="120" id="Jbk-tO-Kmg"/>
                             <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="4Cs-ZL-24q" secondAttribute="trailing" constant="16" id="MXY-2U-z80"/>
+                            <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="wSe-PB-VZL" secondAttribute="trailing" constant="16" id="O91-W9-cwp"/>
                             <constraint firstItem="b1T-SU-Nre" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="16" id="OB0-Qf-Dza"/>
+                            <constraint firstItem="wSe-PB-VZL" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="16" id="OYB-Xr-4yb"/>
                             <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="E7c-Kg-Dtb" secondAttribute="trailing" constant="16" id="PMm-ea-Ccv"/>
-                            <constraint firstItem="zaM-1Q-JWO" firstAttribute="top" secondItem="4Cs-ZL-24q" secondAttribute="bottom" constant="33" id="Qu0-1o-ZYI"/>
+                            <constraint firstItem="SeH-eH-J5S" firstAttribute="bottom" secondItem="e2a-Xc-uWM" secondAttribute="bottom" constant="33" id="Ug0-Fz-vlx"/>
                             <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="b1T-SU-Nre" secondAttribute="trailing" constant="16" id="WhH-Pz-txb"/>
-                            <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="zaM-1Q-JWO" secondAttribute="trailing" constant="16" id="XPI-9T-HTU"/>
                             <constraint firstItem="Lfm-Cd-nWw" firstAttribute="top" secondItem="SeH-eH-J5S" secondAttribute="top" constant="20" id="Xwu-Ws-zhb"/>
                             <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="Lfm-Cd-nWw" secondAttribute="trailing" constant="120" id="aUT-PY-Q7t"/>
                             <constraint firstItem="NXO-bE-HQn" firstAttribute="top" secondItem="b1T-SU-Nre" secondAttribute="bottom" constant="33" id="c9e-dP-xnp"/>
                             <constraint firstItem="4Cs-ZL-24q" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="16" id="dRO-uc-k9S"/>
+                            <constraint firstItem="y0B-O2-Nn3" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="16" id="dYC-9r-Pat"/>
+                            <constraint firstItem="y0B-O2-Nn3" firstAttribute="top" secondItem="bJ8-Pp-0uz" secondAttribute="bottom" constant="8" symbolic="YES" id="gAN-Gq-CnU"/>
                             <constraint firstItem="b1T-SU-Nre" firstAttribute="top" secondItem="Lfm-Cd-nWw" secondAttribute="bottom" constant="8" symbolic="YES" id="h3C-mk-Nu6"/>
-                            <constraint firstItem="zaM-1Q-JWO" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="16" id="qVR-dY-hw2"/>
+                            <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="WLA-7W-B3f" secondAttribute="trailing" constant="16" id="hwl-2T-dN8"/>
+                            <constraint firstItem="wSe-PB-VZL" firstAttribute="top" secondItem="4Cs-ZL-24q" secondAttribute="bottom" constant="33" id="l7s-IS-8Fy"/>
+                            <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="e2a-Xc-uWM" secondAttribute="trailing" constant="16" id="nO0-G1-KNB"/>
+                            <constraint firstItem="SeH-eH-J5S" firstAttribute="bottom" secondItem="e2a-Xc-uWM" secondAttribute="bottom" constant="33" id="ovI-KN-Djg"/>
+                            <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="e2a-Xc-uWM" secondAttribute="trailing" constant="16" id="ryc-ld-sNx"/>
+                            <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="bJ8-Pp-0uz" secondAttribute="trailing" constant="30" id="sQ2-PN-0C8"/>
+                            <constraint firstItem="bJ8-Pp-0uz" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="30" id="vh9-jV-Sl8"/>
+                            <constraint firstItem="bJ8-Pp-0uz" firstAttribute="top" secondItem="E7c-Kg-Dtb" secondAttribute="bottom" constant="24" id="vm8-Yp-j0e"/>
                             <constraint firstItem="SeH-eH-J5S" firstAttribute="trailing" secondItem="NXO-bE-HQn" secondAttribute="trailing" constant="120" id="w6s-bO-Bjr"/>
-                            <constraint firstItem="E7c-Kg-Dtb" firstAttribute="top" secondItem="zaM-1Q-JWO" secondAttribute="bottom" constant="33" id="wbU-pW-aRf"/>
                             <constraint firstItem="NXO-bE-HQn" firstAttribute="leading" secondItem="SeH-eH-J5S" secondAttribute="leading" constant="120" id="zHh-mN-DDz"/>
+                            <constraint firstItem="WLA-7W-B3f" firstAttribute="top" secondItem="y0B-O2-Nn3" secondAttribute="bottom" constant="66" id="zcg-w3-eBY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="person.fill" catalog="system" id="rH7-Mn-LSC"/>
                     <navigationItem key="navigationItem" id="lN4-xI-s4a"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="caloriesLabel" destination="y0B-O2-Nn3" id="Cok-v9-5Lr"/>
                         <outlet property="heightLabel" destination="b1T-SU-Nre" id="Slv-gy-0Nd"/>
-                        <outlet property="optionLabel" destination="zaM-1Q-JWO" id="Bln-7s-zd6"/>
+                        <outlet property="optionLabel" destination="wSe-PB-VZL" id="fZl-3o-Tx5"/>
+                        <outlet property="statisticsLabel" destination="WLA-7W-B3f" id="SXY-GR-AVj"/>
                         <outlet property="weightLabel" destination="4Cs-ZL-24q" id="FpD-1p-vZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2C-qw-hWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1316.793893129771" y="-56.338028169014088"/>
+        </scene>
+        <!--Calories Input View Controller-->
+        <scene sceneID="MKj-SB-E08">
+            <objects>
+                <viewController id="tDR-W2-2xl" customClass="CaloriesInputViewController" customModule="Fitster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eUN-92-ivQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIx-ty-9gG">
+                                <rect key="frame" x="16" y="653" width="361" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vEC-tF-ZPH"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Применить">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="applyCaloriesPressed:" destination="tDR-W2-2xl" eventType="touchUpInside" id="iRx-1e-MWS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите количство потребленных ккалорий" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jno-8a-xtM">
+                                <rect key="frame" x="16" y="129" width="361" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4n1-3t-xyc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sT3-H1-TjV">
+                                <rect key="frame" x="16" y="252" width="361" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rg6-B4-bUN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tuu-vV-MHu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jno-8a-xtM" firstAttribute="top" secondItem="tuu-vV-MHu" secondAttribute="top" constant="70" id="DFd-Rc-ppe"/>
+                            <constraint firstItem="tuu-vV-MHu" firstAttribute="bottom" secondItem="AIx-ty-9gG" secondAttribute="bottom" constant="70" id="Ppq-gw-Qkf"/>
+                            <constraint firstItem="sT3-H1-TjV" firstAttribute="centerX" secondItem="eUN-92-ivQ" secondAttribute="centerX" id="SCe-6p-PvJ"/>
+                            <constraint firstItem="tuu-vV-MHu" firstAttribute="trailing" secondItem="Jno-8a-xtM" secondAttribute="trailing" constant="16" id="TCj-Z7-nb6"/>
+                            <constraint firstItem="tuu-vV-MHu" firstAttribute="trailing" secondItem="AIx-ty-9gG" secondAttribute="trailing" constant="16" id="UyC-2j-tbC"/>
+                            <constraint firstItem="AIx-ty-9gG" firstAttribute="leading" secondItem="tuu-vV-MHu" secondAttribute="leading" constant="16" id="aug-7g-LIH"/>
+                            <constraint firstItem="sT3-H1-TjV" firstAttribute="top" secondItem="Jno-8a-xtM" secondAttribute="bottom" constant="63" id="cq4-r8-fAf"/>
+                            <constraint firstItem="tuu-vV-MHu" firstAttribute="trailing" secondItem="sT3-H1-TjV" secondAttribute="trailing" constant="16" id="hxe-YM-NwO"/>
+                            <constraint firstItem="Jno-8a-xtM" firstAttribute="leading" secondItem="tuu-vV-MHu" secondAttribute="leading" constant="16" id="oRX-UT-Xrk"/>
+                            <constraint firstItem="sT3-H1-TjV" firstAttribute="leading" secondItem="tuu-vV-MHu" secondAttribute="leading" constant="16" id="udk-x6-CZn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fTe-nC-NvV"/>
+                    <connections>
+                        <outlet property="caloriesTF" destination="sT3-H1-TjV" id="ibx-jl-SeU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQL-cI-hzG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316.793893129771" y="656.33802816901414"/>
         </scene>
     </scenes>
     <resources>

@@ -50,6 +50,8 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
+    
+    
     @IBAction func applyHeightPressed(_ sender: UIButton) {
         if let height = heightTF.text{
             MainPageViewController().defaults.set(Double(height), forKey: "savedHeight")
@@ -58,12 +60,12 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
             MainPageViewController().defaults.set(Double(weight), forKey: "savedWeight")
         }
         if let age = ageTF.text{
-            MainPageViewController().defaults.set(Int(age), forKey: "savedAge")
+            MainPageViewController().defaults.set(Double(age), forKey: "savedAge")
         }
-        MainPageViewController().defaults.set(selectedOption, forKey: "selectedOption")
+        MainPageViewController().defaults.set(String(selectedOption), forKey: "selectedOption")
         
         
-        if heightTF.text != "" && weightTF.text != "" && ageTF.text != ""  {
+        if heightTF.text != "" && weightTF.text != "" && ageTF.text != "" {
             MainPageViewController().defaults.set(true, forKey: "isAllDataSaved")
             dismiss(animated: true, completion: nil)
         } else {
@@ -71,6 +73,7 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
         }
+        MainPageViewController().defaults.set(0, forKey: "takenCalories")
         
     }
     

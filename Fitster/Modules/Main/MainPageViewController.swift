@@ -10,14 +10,16 @@ import UIKit
 class MainPageViewController: UIViewController {
     let defaults = UserDefaults.standard
     
-    var dayCalories = 0.0
+    var dayCalories = 0
     
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var optionLabel: UILabel!
+    @IBOutlet weak var caloriesLabel: UILabel!
+    @IBOutlet weak var statisticsLabel: UILabel!
     
     enum Option: String {
-        case massGain = "Набор массы"
+        case massGain = "Набор веса"
         case weightMaintenance = "Поддержание веса"
         case weightLoss = "Уменьшение веса"
     }
@@ -29,9 +31,11 @@ class MainPageViewController: UIViewController {
         static let selectedOption = "selectedOption"
         static let savedSex = "savedSex"
         static let isAllDataSaved = "isAllDataSaved"
+        static let takenCalories = "takenCalories"
     }
     
     override func viewDidLoad() {
+        //UserDefaults.standard.removeObject(forKey: "isAllDataSaved")
         super.viewDidLoad()
         
         if defaults.value(forKey: UserDefaultsKeys.isAllDataSaved) == nil {
@@ -43,6 +47,7 @@ class MainPageViewController: UIViewController {
         heightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedHeight)
         weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
         optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
+                
         
         guard let optionString = defaults.string(forKey: UserDefaultsKeys.selectedOption),
               let option = Option(rawValue: optionString),
@@ -50,13 +55,14 @@ class MainPageViewController: UIViewController {
               let weightString = defaults.string(forKey: UserDefaultsKeys.savedWeight),
               let ageString = defaults.string(forKey: UserDefaultsKeys.savedAge),
               let sex = defaults.string(forKey: UserDefaultsKeys.savedSex),
+              let takenCaloriesString = defaults.string(forKey: UserDefaultsKeys.takenCalories),
               let height = Double(heightString),
               let weight = Double(weightString),
-              let age = Double(ageString) 
+              let age = Double(ageString)
         else {
             return
         }
-        
+
         dayCalories = calculateCalories(
             option: option, 
             height: height,
@@ -64,6 +70,9 @@ class MainPageViewController: UIViewController {
             age: age,
             sex: sex
         )
+        caloriesLabel.text = "\(dayCalories) ккал"
+        statisticsLabel.text = "\(takenCaloriesString) из \(dayCalories)"
+
     }
     
     private func calculateCalories(
@@ -72,7 +81,7 @@ class MainPageViewController: UIViewController {
         weight: Double,
         age: Double,
         sex: String
-    ) -> Double {
+    ) -> Int {
         let isMale = sex == "male"
         var bmr: Double
         
@@ -84,12 +93,13 @@ class MainPageViewController: UIViewController {
         
         switch option {
         case .massGain:
-            return bmr * 1.6
+            bmr *= 1.8
         case .weightMaintenance:
-            return bmr * 1.3
+            bmr *= 1.3
         case .weightLoss:
-            return bmr * 0.85
+            bmr *= 0.85
         }
+        return Int(round(bmr))
     }
 }
 
