@@ -45,10 +45,14 @@ class MainPageViewController: UIViewController {
         UserDefaults.standard.removeObject(forKey: "isAllDataSaved")
 
         super.viewDidLoad()
-        
-
-
-
+    }
+    
+    //MARK: - этот метод вызывается ПОСЛЕ того, как ViewController появляется на экране. Раннее ты пытался вызвать переход в момент, когда экран еще не появился. 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if UserDefaults.standard.data(forKey: "isAllDataSaved") == nil {
+            performSegue(withIdentifier: "goToInputParameters", sender: nil)
+        }
     }
     
     private func calculateCalories(
@@ -78,15 +82,12 @@ class MainPageViewController: UIViewController {
         return Int(round(bmr))
     }
     
+    // MARK: Для удобства, методы ЖЦ пиши рядом друг с другом, чтобы не искать их по всему .swift файлу
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if defaults.value(forKey: UserDefaultsKeys.isAllDataSaved) == nil {
-            print(defaults.value(forKey: UserDefaultsKeys.isAllDataSaved) as Any)
-            performSegue(withIdentifier: "goToInputParameters", sender: nil)
-            return
-        }
-        
+        // TODO: Вынеси в отдельный приватный метод
+        // --
         guard let optionString = defaults.string(forKey: UserDefaultsKeys.selectedOption),
               let option = Option(rawValue: optionString),
               let heightString = defaults.string(forKey: UserDefaultsKeys.savedHeight),
@@ -116,6 +117,7 @@ class MainPageViewController: UIViewController {
         optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
         caloriesLabel.text = defaults.string(forKey: UserDefaultsKeys.dayCalories)
         statisticsLabel.text = "\(takenCalories) из \(dayCalories)"
+        // --
     }
 }
 
