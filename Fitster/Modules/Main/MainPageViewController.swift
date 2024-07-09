@@ -10,6 +10,8 @@ import UIKit
 class MainPageViewController: UIViewController {
     let defaults = UserDefaults.standard
     
+    let flag = UserDefaults.standard.bool(forKey: "isAllDataSaved")
+    
     var dayCalories = 0
     var takenCalories = ""
     
@@ -50,7 +52,7 @@ class MainPageViewController: UIViewController {
     //MARK: - этот метод вызывается ПОСЛЕ того, как ViewController появляется на экране. Раннее ты пытался вызвать переход в момент, когда экран еще не появился. 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if defaults.data(forKey: "isAllDataSaved") == nil {
+        if flag != true {
             performSegue(withIdentifier: "goToInputParameters", sender: nil)
         }
     }

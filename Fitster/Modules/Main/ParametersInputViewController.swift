@@ -12,8 +12,6 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
 
     let options = ["", "Набор веса", "Поддержание веса", "Уменьшение веса"]
 
-
-
     @IBOutlet weak var heightTF: UITextField!
     
     @IBOutlet weak var weightTF: UITextField!
@@ -35,8 +33,6 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
         weightTF.keyboardType = .decimalPad
         ageTF.delegate = self
         ageTF.keyboardType = .decimalPad
-
-
     }
   
     
@@ -67,7 +63,9 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
         
         
         if heightTF.text != "" && weightTF.text != "" && ageTF.text != "" && selectedOption != ""{
-            MainPageViewController().defaults.set(true, forKey: "isAllDataSaved")
+            
+            UserDefaults.standard.set(true, forKey: "isAllDataSaved")
+            
             dismiss(animated: true, completion: nil)
         } else {
                 let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
@@ -75,8 +73,6 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
                         self.present(alert, animated: true, completion: nil)
         }
         MainPageViewController().defaults.set(0, forKey: "takenCalories")
-        //print(MainPageViewController().defaults.data(forKey: "isAllDataSaved"))
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
