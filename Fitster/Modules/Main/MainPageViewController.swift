@@ -37,12 +37,12 @@ class MainPageViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        UserDefaults.standard.removeObject(forKey: "savedHeight")
-        UserDefaults.standard.removeObject(forKey: "savedWeight")
-        UserDefaults.standard.removeObject(forKey: "savedAge")
-        UserDefaults.standard.removeObject(forKey: "selectedOption")
-        UserDefaults.standard.removeObject(forKey: "savedSex")
-        UserDefaults.standard.removeObject(forKey: "isAllDataSaved")
+//        UserDefaults.standard.removeObject(forKey: "savedHeight")
+//        UserDefaults.standard.removeObject(forKey: "savedWeight")
+//        UserDefaults.standard.removeObject(forKey: "savedAge")
+//        UserDefaults.standard.removeObject(forKey: "selectedOption")
+//        UserDefaults.standard.removeObject(forKey: "savedSex")
+//        UserDefaults.standard.removeObject(forKey: "isAllDataSaved")
 
         super.viewDidLoad()
     }
@@ -50,7 +50,7 @@ class MainPageViewController: UIViewController {
     //MARK: - этот метод вызывается ПОСЛЕ того, как ViewController появляется на экране. Раннее ты пытался вызвать переход в момент, когда экран еще не появился. 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if UserDefaults.standard.data(forKey: "isAllDataSaved") == nil {
+        if defaults.data(forKey: "isAllDataSaved") == nil {
             performSegue(withIdentifier: "goToInputParameters", sender: nil)
         }
     }

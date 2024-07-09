@@ -17,13 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Введите ваш рост в см" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rd-lw-BjQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш рост в см" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rd-lw-BjQ">
                                 <rect key="frame" x="16" y="79" width="361" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Введите ваш вес в кг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrJ-Vi-O3C">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш вес в кг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrJ-Vi-O3C">
                                 <rect key="frame" x="16" y="201" width="361" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -92,18 +92,18 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KrJ-Vi-O3C" secondAttribute="trailing" constant="113" id="1iU-u0-ht3"/>
                             <constraint firstItem="5rd-lw-BjQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="7EH-VY-zcB"/>
+                            <constraint firstItem="KrJ-Vi-O3C" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="9CS-2r-dAW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7ex-Zf-6PY" secondAttribute="trailing" constant="16" id="9In-kY-t7a"/>
                             <constraint firstItem="KrJ-Vi-O3C" firstAttribute="top" secondItem="LHs-EX-zSn" secondAttribute="bottom" constant="28" id="AGe-p8-afM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0iL-FU-Ybn" secondAttribute="trailing" constant="16" id="Chx-qt-zXj"/>
                             <constraint firstItem="LHs-EX-zSn" firstAttribute="top" secondItem="5rd-lw-BjQ" secondAttribute="bottom" constant="7" id="FIF-ER-yyk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KrJ-Vi-O3C" secondAttribute="trailing" constant="16" id="FuQ-jG-lPf"/>
                             <constraint firstItem="0iL-FU-Ybn" firstAttribute="top" secondItem="Zgj-1P-16E" secondAttribute="bottom" constant="8" symbolic="YES" id="ISf-o5-gIc"/>
                             <constraint firstAttribute="bottom" secondItem="7ex-Zf-6PY" secondAttribute="bottom" constant="70" id="IaA-dZ-xlR"/>
                             <constraint firstItem="X0R-lH-eq2" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Iy4-t2-vZ7"/>
                             <constraint firstItem="hdg-q4-cUg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Kxy-Zt-1qw"/>
                             <constraint firstItem="rvh-Mg-uBH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="NHs-rc-C0y"/>
-                            <constraint firstItem="5rd-lw-BjQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="106" id="QFW-Tw-KQd"/>
                             <constraint firstItem="7ex-Zf-6PY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Roe-hr-xbW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LHs-EX-zSn" secondAttribute="trailing" constant="16" id="TBX-p4-YpO"/>
                             <constraint firstItem="Zgj-1P-16E" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="90" id="Woe-2G-2kB"/>
@@ -112,11 +112,11 @@
                             <constraint firstItem="S72-P5-emg" firstAttribute="top" secondItem="KrJ-Vi-O3C" secondAttribute="bottom" constant="8" symbolic="YES" id="aFY-R8-GwT"/>
                             <constraint firstItem="rvh-Mg-uBH" firstAttribute="top" secondItem="hdg-q4-cUg" secondAttribute="bottom" constant="28" id="bgu-OB-zmG"/>
                             <constraint firstItem="0iL-FU-Ybn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="hYl-ih-Hdb"/>
-                            <constraint firstItem="KrJ-Vi-O3C" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="112" id="iBI-Ng-IEt"/>
                             <constraint firstAttribute="bottom" secondItem="7ex-Zf-6PY" secondAttribute="bottom" constant="70" id="iFI-ni-cyl"/>
                             <constraint firstItem="LHs-EX-zSn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="kuJ-Gz-scM"/>
                             <constraint firstItem="S72-P5-emg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="lwu-w3-AnA"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5rd-lw-BjQ" secondAttribute="trailing" constant="107" id="o40-Za-TdR"/>
+                            <constraint firstItem="5rd-lw-BjQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="m5v-Su-EsN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5rd-lw-BjQ" secondAttribute="trailing" constant="16" id="ngD-xz-MW0"/>
                             <constraint firstItem="Zgj-1P-16E" firstAttribute="top" secondItem="S72-P5-emg" secondAttribute="bottom" constant="28" id="o5r-3A-q2A"/>
                             <constraint firstItem="hdg-q4-cUg" firstAttribute="top" secondItem="0iL-FU-Ybn" secondAttribute="bottom" constant="28" id="pxx-hW-swx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hdg-q4-cUg" secondAttribute="trailing" constant="16" id="rrp-od-bKp"/>

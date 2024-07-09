@@ -10,7 +10,7 @@ import UIKit
 class ParametersInputViewController: UIViewController, UITextFieldDelegate{
     var selectedOption = ""
 
-    let options = ["Набор веса", "Поддержание веса", "Уменьшение веса"]
+    let options = ["", "Набор веса", "Поддержание веса", "Уменьшение веса"]
 
 
 
@@ -66,7 +66,7 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
         MainPageViewController().defaults.set(String(selectedOption), forKey: "selectedOption")
         
         
-        if heightTF.text != "" && weightTF.text != "" && ageTF.text != "" {
+        if heightTF.text != "" && weightTF.text != "" && ageTF.text != "" && selectedOption != ""{
             MainPageViewController().defaults.set(true, forKey: "isAllDataSaved")
             dismiss(animated: true, completion: nil)
         } else {
@@ -75,6 +75,7 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
                         self.present(alert, animated: true, completion: nil)
         }
         MainPageViewController().defaults.set(0, forKey: "takenCalories")
+        //print(MainPageViewController().defaults.data(forKey: "isAllDataSaved"))
         
     }
     
