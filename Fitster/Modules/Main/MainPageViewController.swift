@@ -11,7 +11,7 @@ class MainPageViewController: UIViewController {
     let defaults = UserDefaults.standard
     
     var dayCalories = 0
-    var takenCaloriesString = ""
+    var takenCalories = ""
     
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
@@ -33,46 +33,21 @@ class MainPageViewController: UIViewController {
         static let savedSex = "savedSex"
         static let isAllDataSaved = "isAllDataSaved"
         static let takenCalories = "takenCalories"
+        static let dayCalories = "dayCalories"
     }
     
     override func viewDidLoad() {
-        //UserDefaults.standard.removeObject(forKey: "isAllDataSaved")
+        UserDefaults.standard.removeObject(forKey: "savedHeight")
+        UserDefaults.standard.removeObject(forKey: "savedWeight")
+        UserDefaults.standard.removeObject(forKey: "savedAge")
+        UserDefaults.standard.removeObject(forKey: "selectedOption")
+        UserDefaults.standard.removeObject(forKey: "savedSex")
+        UserDefaults.standard.removeObject(forKey: "isAllDataSaved")
+
         super.viewDidLoad()
         
-        if defaults.value(forKey: UserDefaultsKeys.isAllDataSaved) == nil {
-            print(defaults.value(forKey: UserDefaultsKeys.isAllDataSaved) as Any)
-            performSegue(withIdentifier: "goToInputParameters", sender: nil)
-            return
-        }
-        
-        heightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedHeight)
-        weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
-        optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
-                
-        takenCaloriesString = defaults.string(forKey: UserDefaultsKeys.takenCalories)!
-        
-        guard let optionString = defaults.string(forKey: UserDefaultsKeys.selectedOption),
-              let option = Option(rawValue: optionString),
-              let heightString = defaults.string(forKey: UserDefaultsKeys.savedHeight),
-              let weightString = defaults.string(forKey: UserDefaultsKeys.savedWeight),
-              let ageString = defaults.string(forKey: UserDefaultsKeys.savedAge),
-              let sex = defaults.string(forKey: UserDefaultsKeys.savedSex),
-              let height = Double(heightString),
-              let weight = Double(weightString),
-              let age = Double(ageString)
-        else {
-            return
-        }
 
-        dayCalories = calculateCalories(
-            option: option, 
-            height: height,
-            weight: weight,
-            age: age,
-            sex: sex
-        )
-        caloriesLabel.text = "\(dayCalories) ккал"
-        statisticsLabel.text = "\(takenCaloriesString) из \(dayCalories)"
+
 
     }
     
@@ -105,11 +80,42 @@ class MainPageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if defaults.value(forKey: UserDefaultsKeys.isAllDataSaved) == nil {
+            print(defaults.value(forKey: UserDefaultsKeys.isAllDataSaved) as Any)
+            performSegue(withIdentifier: "goToInputParameters", sender: nil)
+            return
+        }
+        
+        guard let optionString = defaults.string(forKey: UserDefaultsKeys.selectedOption),
+              let option = Option(rawValue: optionString),
+              let heightString = defaults.string(forKey: UserDefaultsKeys.savedHeight),
+              let weightString = defaults.string(forKey: UserDefaultsKeys.savedWeight),
+              let ageString = defaults.string(forKey: UserDefaultsKeys.savedAge),
+              let sex = defaults.string(forKey: UserDefaultsKeys.savedSex),
+              let height = Double(heightString),
+              let weight = Double(weightString),
+              let age = Double(ageString)
+        else {
+            return
+        }
+
+        dayCalories = calculateCalories(
+            option: option,
+            height: height,
+            weight: weight,
+            age: age,
+            sex: sex
+        )
+        
+        takenCalories = defaults.string(forKey: UserDefaultsKeys.takenCalories)!
+        defaults.set(dayCalories, forKey: UserDefaultsKeys.dayCalories)
+        
         heightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedHeight)
         weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
         optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
-        caloriesLabel.text = "\(dayCalories) ккал"
-        //statisticsLabel.text = "\(takenCaloriesString) из \(dayCalories)"
+        caloriesLabel.text = defaults.string(forKey: UserDefaultsKeys.dayCalories)
+        statisticsLabel.text = "\(takenCalories) из \(dayCalories)"
     }
 }
 
