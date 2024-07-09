@@ -13,11 +13,8 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
     let options = ["", "Набор веса", "Поддержание веса", "Уменьшение веса"]
 
     @IBOutlet weak var heightTF: UITextField!
-    
     @IBOutlet weak var weightTF: UITextField!
-    
     @IBOutlet weak var pickerView: UIPickerView!
-    
     @IBOutlet weak var ageTF: UITextField!
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!

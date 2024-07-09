@@ -50,12 +50,7 @@ class MainPageViewController: UIViewController {
     }
     
     //MARK: - этот метод вызывается ПОСЛЕ того, как ViewController появляется на экране. Раннее ты пытался вызвать переход в момент, когда экран еще не появился. 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if flag != true {
-            performSegue(withIdentifier: "goToInputParameters", sender: nil)
-        }
-    }
+
     
     private func calculateCalories(
         option: Option,
@@ -83,13 +78,19 @@ class MainPageViewController: UIViewController {
         }
         return Int(round(bmr))
     }
+   
     
-    // MARK: Для удобства, методы ЖЦ пиши рядом друг с другом, чтобы не искать их по всему .swift файлу
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if UserDefaults.standard.bool(forKey: "isAllDataSaved") != true {
+            performSegue(withIdentifier: "goToInputParameters", sender: nil)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // TODO: Вынеси в отдельный приватный метод
-        // --
+        print("vWA is working...")
+
         guard let optionString = defaults.string(forKey: UserDefaultsKeys.selectedOption),
               let option = Option(rawValue: optionString),
               let heightString = defaults.string(forKey: UserDefaultsKeys.savedHeight),
@@ -100,9 +101,12 @@ class MainPageViewController: UIViewController {
               let weight = Double(weightString),
               let age = Double(ageString)
         else {
+            print("returning nil")
             return
         }
-
+        
+        print("vWA is still working...")
+        
         dayCalories = calculateCalories(
             option: option,
             height: height,
@@ -114,12 +118,49 @@ class MainPageViewController: UIViewController {
         takenCalories = defaults.string(forKey: UserDefaultsKeys.takenCalories)!
         defaults.set(dayCalories, forKey: UserDefaultsKeys.dayCalories)
         
+        print("before setting labels")
+        
         heightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedHeight)
         weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
         optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
         caloriesLabel.text = defaults.string(forKey: UserDefaultsKeys.dayCalories)
         statisticsLabel.text = "\(takenCalories) из \(dayCalories)"
-        // --
+        
+        print("after setting labels")
+
+        
     }
+    
+        let currentDate: Date
+        var timer: Timer
+        let calendar = Calendar.current
+
+        // Добавляем инициализатор init(coder:)
+        required init?(coder aDecoder: NSCoder) {
+            self.currentDate = Date()
+            self.timer = Timer()
+            super.init(coder: aDecoder)
+        }
+
+        init() {
+            self.currentDate = Date()
+            self.timer = Timer()
+            let dateComponents = calendar.dateComponents([.year, .month, .day], from: currentDate)
+
+            super.init(nibName: nil, bundle: nil)
+
+            if let nextDay = calendar.date(byAdding: .day, value: 1, to: calendar.date(from: dateComponents)!) {
+                self.timer = Timer(fireAt: nextDay, interval: 0, target: self, selector: #selector(newDayAction), userInfo: nil, repeats: false)
+                RunLoop.main.add(timer, forMode: .common)
+            } else {
+                fatalError("Unable to calculate next day")
+            }
+        }
+
+        @objc func newDayAction() {
+            defaults.set(0, forKey: "takenCalories")
+        }
+
+
 }
 
