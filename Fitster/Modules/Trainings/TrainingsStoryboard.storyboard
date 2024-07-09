@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jrw-bU-SlX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -287,7 +286,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Готово"/>
                                 <connections>
                                     <action selector="Dismiss:" destination="OL9-TW-mBg" eventType="touchUpInside" id="Pp0-bp-X9a"/>
-                                    <action selector="SaveButton:" destination="OL9-TW-mBg" eventType="touchUpInside" id="kW1-cd-zEW"/>
+                                    <action selector="saveButton:" destination="OL9-TW-mBg" eventType="touchUpInside" id="kW1-cd-zEW"/>
                                 </connections>
                             </button>
                         </subviews>

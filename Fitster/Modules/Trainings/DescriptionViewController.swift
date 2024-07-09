@@ -26,7 +26,7 @@ class DescriptionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "123" {
             if let destinationVC = segue.destination as? CalloriesViewController{
-               destinationVC.idEx = exercise?.id
+               destinationVC.exersideId = exercise?.id
             }
         }
     }
