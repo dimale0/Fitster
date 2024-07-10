@@ -1,34 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bb6-Ud-iiP">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Saved Exercises View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HistoryStoryboard" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryStoryboard" id="Y6W-OH-hqX" customClass="SavedExercisesViewController" customModule="Fitster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KcI-k6-r5L">
+                                <rect key="frame" x="0.0" y="140" width="393" height="629"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mdU-aS-jiR">
+                                    <size key="itemSize" width="393" height="479"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SavedEx" id="4p8-Qr-lQk" customClass="SavedExercisesCollectionViewCell" customModule="Fitster" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="479"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mcK-mg-8js">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="479"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Присед" id="YCS-gV-fey">
+                                                    <rect key="frame" x="0.0" y="8" width="393" height="257"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Упражнение:Присед" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT6-cJ-EOt">
+                                                    <rect key="frame" x="23" y="250" width="201" height="118"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Каллорий потрачено: 123" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-8R-UHx">
+                                                    <rect key="frame" x="232" y="250" width="161" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Дата и время: 2024-07-05 17:07:35" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYd-I2-1r9">
+                                                    <rect key="frame" x="17" y="340" width="370" height="106"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-63-OPU">
+                                                    <rect key="frame" x="285" y="426" width="89" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Удалить"/>
+                                                </button>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="393" height="479"/>
+                                        <connections>
+                                            <outlet property="calloriesExercise" destination="Rsn-8R-UHx" id="ePg-yb-XOB"/>
+                                            <outlet property="deleteButton" destination="dbc-63-OPU" id="oQI-yL-Rlk"/>
+                                            <outlet property="imageExercise" destination="YCS-gV-fey" id="uF6-Oq-Wlu"/>
+                                            <outlet property="nameExercise" destination="aT6-cJ-EOt" id="f0H-Ou-u0f"/>
+                                            <outlet property="timeExercise" destination="eYd-I2-1r9" id="pZy-hG-xWB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="выполненные упражнения" translatesAutoresizingMaskIntoConstraints="NO" id="PUd-yN-PXO">
+                                <rect key="frame" x="0.0" y="117" width="393" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="PO6-zD-dIQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KcI-k6-r5L" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="7zN-yC-Oh8"/>
+                            <constraint firstItem="KcI-k6-r5L" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="9hk-Fo-HNB"/>
+                            <constraint firstItem="PUd-yN-PXO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="14" id="DvK-N1-shL"/>
+                            <constraint firstItem="KcI-k6-r5L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="M2w-Vh-OzZ"/>
+                            <constraint firstItem="KcI-k6-r5L" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="37" id="fbn-xK-7Rl"/>
+                            <constraint firstItem="PUd-yN-PXO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kWU-fD-yhb"/>
+                            <constraint firstItem="PUd-yN-PXO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="lOJ-Vf-xtn"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="bookmark.fill" catalog="system" id="cCF-cg-2Je"/>
+                    <navigationItem key="navigationItem" id="uym-RM-Hgc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="finishedExercisesCollectionView" destination="KcI-k6-r5L" id="8YC-A8-3Bf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-34"/>
+            <point key="canvasLocation" x="3326" y="-235"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="64M-vy-IRq">
+            <objects>
+                <viewController id="tKW-h5-eYb" customClass="CalendarViewController" customModule="Fitster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GMX-Aa-X6A">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Ny-2q-LFs">
+                                <rect key="frame" x="0.0" y="142" width="393" height="607"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yQb-wu-KsJ">
+                                    <size key="itemSize" width="393" height="48"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCell" id="Urt-1G-wwZ" customClass="CalendarCollectionViewCell" customModule="Fitster" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="35W-Lr-yHK">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Дата выполнения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GH7-m8-4Qt">
+                                                    <rect key="frame" x="37" y="4" width="291" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="393" height="48"/>
+                                        <connections>
+                                            <outlet property="time" destination="GH7-m8-4Qt" id="Wma-3A-5Px"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="выполненные упражнения" translatesAutoresizingMaskIntoConstraints="NO" id="d3j-Rh-r6R">
+                                <rect key="frame" x="0.0" y="103" width="393" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DdW-dt-zMd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="bookmark.fill" catalog="system" selectedImage="bookmark.fill" id="64a-yr-F9s"/>
+                    <navigationItem key="navigationItem" id="5bX-Is-n8A"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendarCollectionView" destination="3Ny-2q-LFs" id="rif-f4-rKA"/>
+                        <segue destination="Y6W-OH-hqX" kind="show" identifier="showDetails" id="zLv-UD-Mdm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5uR-qG-kp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428.2442748091603" y="-235.21126760563382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m0B-84-UZA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bb6-Ud-iiP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="bookmark.fill" catalog="system" id="cCF-cg-2Je"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sgw-db-it6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g5I-m9-6Ig">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tKW-h5-eYb" kind="relationship" relationship="rootViewController" id="Le7-KE-kiX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Om7-gs-am9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501.5267175572519" y="-235.21126760563382"/>
         </scene>
     </scenes>
     <resources>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
+        <image name="Присед" width="1200" height="800"/>
+        <image name="выполненные упражнения" width="477" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
