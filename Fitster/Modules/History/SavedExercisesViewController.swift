@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class SavedExercisesViewController: UIViewController {
     @IBOutlet weak var finishedExercisesCollectionView: UICollectionView!
     
@@ -25,9 +24,13 @@ class SavedExercisesViewController: UIViewController {
         finishedExercises = ExerciseManager.shared.loadExercises().filter { $0.time.hasPrefix(selectedDate) }
         finishedExercisesCollectionView.reloadData()
     }
+}
 
+private extension SavedExercisesViewController {
     func showDeleteConfirmation(for exercise: Exercise, at indexPath: IndexPath) {
-        let alert = UIAlertController(title: "Подтвердите удаление", message: "Вы уверены, что хотите удалить это упражнение?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Подтвердите удаление",
+                                      message: "Вы уверены, что хотите удалить это упражнение?",
+                                      preferredStyle: .alert)
         
         let deleteAction = UIAlertAction(title: "Да", style: .destructive) { _ in
             self.deleteExercise(at: indexPath)
@@ -41,15 +44,24 @@ class SavedExercisesViewController: UIViewController {
     }
     
     func deleteExercise(at indexPath: IndexPath) {
-            guard indexPath.row < finishedExercises.count else {
-                // Безопасная проверка, чтобы избежать выхода за пределы массива
-                return
-            }
-            
-            finishedExercises.remove(at: indexPath.row)
-            ExerciseManager.shared.saveExercises(finishedExercises)
-            finishedExercisesCollectionView.reloadData()
+        guard indexPath.row < finishedExercises.count else {
+            // Безопасная проверка, чтобы избежать выхода за пределы массива
+            return
         }
+        
+        finishedExercises.remove(at: indexPath.row)
+        ExerciseManager.shared.saveExercises(finishedExercises)
+        finishedExercisesCollectionView.reloadData()
+    }
+    
+    @objc func deleteButtonTapped(_ sender: UIButton) {
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        guard indexPath.row < finishedExercises.count else {
+            // Безопасная проверка, чтобы избежать выхода за пределы массива
+            return
+        }
+        showDeleteConfirmation(for: finishedExercises[indexPath.row], at: indexPath)
+    }
 }
 
 extension SavedExercisesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -66,15 +78,6 @@ extension SavedExercisesViewController: UICollectionViewDataSource, UICollection
         cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
         return cell
     }
-
-    @objc func deleteButtonTapped(_ sender: UIButton) {
-            let indexPath = IndexPath(row: sender.tag, section: 0)
-            guard indexPath.row < finishedExercises.count else {
-                // Безопасная проверка, чтобы избежать выхода за пределы массива
-                return
-            }
-            showDeleteConfirmation(for: finishedExercises[indexPath.row], at: indexPath)
-        }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 393, height: 479)

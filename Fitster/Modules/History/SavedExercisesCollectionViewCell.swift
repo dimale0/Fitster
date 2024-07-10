@@ -16,11 +16,7 @@ class SavedExercisesCollectionViewCell: UICollectionViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        timeExercise.text = nil
-        calloriesExercise.text = nil
-        nameExercise.text = nil
-        imageExercise.image = nil
-        deleteButton.removeTarget(nil, action: nil, for: .allEvents)
+        prepareDataForReuse()
     }
 
     func config(exercise: Exercise) {
@@ -39,5 +35,15 @@ class SavedExercisesCollectionViewCell: UICollectionViewCell {
         calloriesExercise.text = "Калорий потрачено: \(exercise.callories)"
         nameExercise.text = "Упражнение: \(exercise.description)"
         imageExercise.image = UIImage(named: exercise.image)
+    }
+}
+
+private extension SavedExercisesCollectionViewCell {
+    func prepareDataForReuse() {
+        timeExercise.text = nil
+        calloriesExercise.text = nil
+        nameExercise.text = nil
+        imageExercise.image = nil
+        deleteButton.removeTarget(nil, action: nil, for: .allEvents)
     }
 }
