@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2AFA32E9-82E8-46A7-8BBF-B3869CA5188B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "509126BD-C639-473F-9809-5A513BEF8391"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitster/Modules/Main/MainPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "UserDefaultsKeys"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C820F5F-21C0-46EA-9BA2-06FEF438A26E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitster/Modules/Main/MainPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "MainPageViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23ECC43B-D2DE-435E-B155-C2AE2A368A82"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitster/Modules/Main/MainPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C5EB8C5-9C5B-432F-AB0C-C83F4D559E33"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitster/Modules/Main/MainPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C5EB8C5-9C5B-432F-AB0C-C83F4D559E33 - de5e2ebcf512be6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Fitster.MainPageViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Fitster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timursalakhiev/Documents/GitHub/Fitster/Fitster/Modules/Main/MainPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "3374">
+               </Location>
+               <Location
+                  uuid = "3C5EB8C5-9C5B-432F-AB0C-C83F4D559E33 - de5e2ebcf512be6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Fitster.MainPageViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Fitster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timursalakhiev/Documents/GitHub/Fitster/Fitster/Modules/Main/MainPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "3474">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "699FBA3B-1415-4A22-B377-80C99FB5D84B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitster/Modules/Main/MainPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "699FBA3B-1415-4A22-B377-80C99FB5D84B - de5e2ebcf512be28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Fitster.MainPageViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Fitster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timursalakhiev/Documents/GitHub/Fitster/Fitster/Modules/Main/MainPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "3007">
+               </Location>
+               <Location
+                  uuid = "699FBA3B-1415-4A22-B377-80C99FB5D84B - de5e2ebcf512be28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Fitster.MainPageViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Fitster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timursalakhiev/Documents/GitHub/Fitster/Fitster/Modules/Main/MainPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "3120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BB3D3C7-4D2D-49C4-93D5-EDF7F8209FFD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitster/Modules/Main/MainPageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2BB3D3C7-4D2D-49C4-93D5-EDF7F8209FFD - de5e2ebcf512be4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Fitster.MainPageViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Fitster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timursalakhiev/Documents/GitHub/Fitster/Fitster/Modules/Main/MainPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "3197">
+               </Location>
+               <Location
+                  uuid = "2BB3D3C7-4D2D-49C4-93D5-EDF7F8209FFD - de5e2ebcf512be4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Fitster.MainPageViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Fitster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/timursalakhiev/Documents/GitHub/Fitster/Fitster/Modules/Main/MainPageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "3297">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

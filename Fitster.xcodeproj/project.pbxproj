@@ -25,6 +25,9 @@
 		07C1B57E2C37011900F7AD86 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C1B57D2C37011900F7AD86 /* MainStoryboard.storyboard */; };
 		07C1B5802C37012800F7AD86 /* HistoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C1B57F2C37012800F7AD86 /* HistoryStoryboard.storyboard */; };
 		07C1B5822C37013C00F7AD86 /* TrainingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C1B5812C37013C00F7AD86 /* TrainingsStoryboard.storyboard */; };
+		762D81E92C3AB7960075D9B2 /* ParametersInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D81E82C3AB7960075D9B2 /* ParametersInputViewController.swift */; };
+		762D81EB2C3AB9FD0075D9B2 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D81EA2C3AB9FD0075D9B2 /* MainPageViewController.swift */; };
+		766DFAA52C3C5C5400AB08F7 /* CaloriesInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766DFAA42C3C5C5400AB08F7 /* CaloriesInputViewController.swift */; };
 		8D5877472C39A3EE005C9204 /* ExersiseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5877462C39A3EE005C9204 /* ExersiseManager.swift */; };
 		8D8C88932C37349100C5C9D5 /* CalloriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C88922C37349100C5C9D5 /* CalloriesViewController.swift */; };
 		8D8C88952C38106D00C5C9D5 /* SavedExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C88942C38106D00C5C9D5 /* SavedExercisesViewController.swift */; };
@@ -54,6 +57,9 @@
 		07C1B57D2C37011900F7AD86 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		07C1B57F2C37012800F7AD86 /* HistoryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryStoryboard.storyboard; sourceTree = "<group>"; };
 		07C1B5812C37013C00F7AD86 /* TrainingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingsStoryboard.storyboard; sourceTree = "<group>"; };
+		762D81E82C3AB7960075D9B2 /* ParametersInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersInputViewController.swift; sourceTree = "<group>"; };
+		762D81EA2C3AB9FD0075D9B2 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		766DFAA42C3C5C5400AB08F7 /* CaloriesInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesInputViewController.swift; sourceTree = "<group>"; };
 		8D5877462C39A3EE005C9204 /* ExersiseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExersiseManager.swift; sourceTree = "<group>"; };
 		8D8C88922C37349100C5C9D5 /* CalloriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloriesViewController.swift; sourceTree = "<group>"; };
 		8D8C88942C38106D00C5C9D5 /* SavedExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedExercisesViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				07C1B57D2C37011900F7AD86 /* MainStoryboard.storyboard */,
+				762D81EA2C3AB9FD0075D9B2 /* MainPageViewController.swift */,
+				762D81E82C3AB7960075D9B2 /* ParametersInputViewController.swift */,
+				766DFAA42C3C5C5400AB08F7 /* CaloriesInputViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -250,6 +259,10 @@
 				8D5877472C39A3EE005C9204 /* ExersiseManager.swift in Sources */,
 				0767C75D2C3B195000C2A81D /* MockData.swift in Sources */,
 				07C1B5662C36FFD800F7AD86 /* AppDelegate.swift in Sources */,
+				762D81E92C3AB7960075D9B2 /* ParametersInputViewController.swift in Sources */,
+				762D81EB2C3AB9FD0075D9B2 /* MainPageViewController.swift in Sources */,
+				07C1B5682C36FFD800F7AD86 /* SceneDelegate.swift in Sources */,
+				766DFAA52C3C5C5400AB08F7 /* CaloriesInputViewController.swift in Sources */,
 				8D8C889D2C384BC700C5C9D5 /* CalendarCollectionViewCell.swift in Sources */,
 				07C1B5682C36FFD800F7AD86 /* SceneDelegate.swift in Sources */,
 				8D8C88932C37349100C5C9D5 /* CalloriesViewController.swift in Sources */,
