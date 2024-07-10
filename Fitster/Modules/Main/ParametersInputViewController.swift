@@ -61,7 +61,7 @@ class ParametersInputViewController: UIViewController, UITextFieldDelegate{
         
         if heightTF.text != "" && weightTF.text != "" && ageTF.text != "" && selectedOption != ""{
             
-            UserDefaults.standard.set(true, forKey: "isAllDataSaved")
+            MainPageViewController().defaults.set(true, forKey: "isAllDataSaved")
             
             dismiss(animated: true, completion: nil)
         } else {

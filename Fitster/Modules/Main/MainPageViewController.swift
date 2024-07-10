@@ -89,46 +89,48 @@ class MainPageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("vWA is working...")
-
-        guard let optionString = defaults.string(forKey: UserDefaultsKeys.selectedOption),
-              let option = Option(rawValue: optionString),
-              let heightString = defaults.string(forKey: UserDefaultsKeys.savedHeight),
-              let weightString = defaults.string(forKey: UserDefaultsKeys.savedWeight),
-              let ageString = defaults.string(forKey: UserDefaultsKeys.savedAge),
-              let sex = defaults.string(forKey: UserDefaultsKeys.savedSex),
-              let height = Double(heightString),
-              let weight = Double(weightString),
-              let age = Double(ageString)
-        else {
-            print("returning nil")
-            return
+        print(defaults.data(forKey: UserDefaultsKeys.isAllDataSaved))
+        if UserDefaults.standard.bool(forKey: "isAllDataSaved") == true{
+            print("vWA is working...")
+            
+            guard let optionString = defaults.string(forKey: UserDefaultsKeys.selectedOption),
+                  let option = Option(rawValue: optionString),
+                  let heightString = defaults.string(forKey: UserDefaultsKeys.savedHeight),
+                  let weightString = defaults.string(forKey: UserDefaultsKeys.savedWeight),
+                  let ageString = defaults.string(forKey: UserDefaultsKeys.savedAge),
+                  //let sex = defaults.string(forKey: UserDefaultsKeys.savedSex),
+                  let height = Double(heightString),
+                  let weight = Double(weightString),
+                  let age = Double(ageString)
+            else {
+                print("returning nil")
+                return
+            }
+            
+            print("vWA is still working...")
+            
+            dayCalories = calculateCalories(
+                option: option,
+                height: height,
+                weight: weight,
+                age: age,
+                sex: "male"
+            )
+            
+            takenCalories = defaults.string(forKey: UserDefaultsKeys.takenCalories)!
+            defaults.set(dayCalories, forKey: UserDefaultsKeys.dayCalories)
+            
+            print("before setting labels")
+            
+            heightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedHeight)
+            weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
+            optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
+            caloriesLabel.text = defaults.string(forKey: UserDefaultsKeys.dayCalories)
+            statisticsLabel.text = "\(takenCalories) из \(dayCalories)"
+            
+            print("after setting labels")
+            
         }
-        
-        print("vWA is still working...")
-        
-        dayCalories = calculateCalories(
-            option: option,
-            height: height,
-            weight: weight,
-            age: age,
-            sex: sex
-        )
-        
-        takenCalories = defaults.string(forKey: UserDefaultsKeys.takenCalories)!
-        defaults.set(dayCalories, forKey: UserDefaultsKeys.dayCalories)
-        
-        print("before setting labels")
-        
-        heightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedHeight)
-        weightLabel.text = defaults.string(forKey: UserDefaultsKeys.savedWeight)
-        optionLabel.text = defaults.string(forKey: UserDefaultsKeys.selectedOption)
-        caloriesLabel.text = defaults.string(forKey: UserDefaultsKeys.dayCalories)
-        statisticsLabel.text = "\(takenCalories) из \(dayCalories)"
-        
-        print("after setting labels")
-
-        
     }
     
         let currentDate: Date
