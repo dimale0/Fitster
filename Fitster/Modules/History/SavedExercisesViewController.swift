@@ -45,7 +45,6 @@ private extension SavedExercisesViewController {
     
     func deleteExercise(at indexPath: IndexPath) {
         guard indexPath.row < finishedExercises.count else {
-            // Безопасная проверка, чтобы избежать выхода за пределы массива
             return
         }
         
@@ -56,10 +55,6 @@ private extension SavedExercisesViewController {
     
     @objc func deleteButtonTapped(_ sender: UIButton) {
         let indexPath = IndexPath(row: sender.tag, section: 0)
-        guard indexPath.row < finishedExercises.count else {
-            // Безопасная проверка, чтобы избежать выхода за пределы массива
-            return
-        }
         showDeleteConfirmation(for: finishedExercises[indexPath.row], at: indexPath)
     }
 }
