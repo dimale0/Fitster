@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22) //размер шрифта в nav bar
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20) //размер шрифта в nav bar
         ]
         return true
     }
