@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Saved Exercises View Controller-->
+        <!--История упражнений-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="HistoryStoryboard" id="Y6W-OH-hqX" customClass="SavedExercisesViewController" customModule="Fitster" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,86 +19,98 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KcI-k6-r5L">
-                                <rect key="frame" x="0.0" y="140" width="393" height="629"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mdU-aS-jiR">
-                                    <size key="itemSize" width="393" height="479"/>
+                                    <size key="itemSize" width="393" height="475"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SavedEx" id="4p8-Qr-lQk" customClass="SavedExercisesCollectionViewCell" customModule="Fitster" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="479"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="475"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mcK-mg-8js">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="479"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="475"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Присед" id="YCS-gV-fey">
-                                                    <rect key="frame" x="0.0" y="8" width="393" height="257"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Упражнение:Присед" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT6-cJ-EOt">
-                                                    <rect key="frame" x="8" y="291" width="216" height="91"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнение: Присед" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT6-cJ-EOt">
+                                                    <rect key="frame" x="31" y="238" width="324" height="66"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-63-OPU">
-                                                    <rect key="frame" x="285" y="440" width="89" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Каллорий потрачено: 123" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-8R-UHx">
+                                                    <rect key="frame" x="31" y="312" width="324" height="59"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2024-07-05 17:07:35" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYd-I2-1r9">
+                                                    <rect key="frame" x="31" y="379" width="331" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vxk-hb-7Co">
+                                                    <rect key="frame" x="38" y="31" width="317" height="199"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="317" id="LDi-Dc-YFM"/>
+                                                        <constraint firstAttribute="height" constant="199" id="iBy-UD-zyw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-63-OPU">
+                                                    <rect key="frame" x="265" y="429" width="97" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Удалить"/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Каллорий потрачено: 123" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-8R-UHx">
-                                                    <rect key="frame" x="232" y="300" width="161" height="59"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Дата и время: 2024-07-05 17:07:35" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYd-I2-1r9">
-                                                    <rect key="frame" x="15" y="390" width="370" height="42"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rsn-8R-UHx" firstAttribute="leading" secondItem="mcK-mg-8js" secondAttribute="leading" constant="31" id="2zn-yp-gVZ"/>
+                                                <constraint firstItem="Rsn-8R-UHx" firstAttribute="top" secondItem="aT6-cJ-EOt" secondAttribute="bottom" constant="8" id="Dda-8S-i7i"/>
+                                                <constraint firstAttribute="bottom" secondItem="dbc-63-OPU" secondAttribute="bottom" constant="16" id="HXI-xs-7OT"/>
+                                                <constraint firstAttribute="trailing" secondItem="aT6-cJ-EOt" secondAttribute="trailing" constant="38" id="IHM-ya-94E"/>
+                                                <constraint firstAttribute="trailing" secondItem="eYd-I2-1r9" secondAttribute="trailing" constant="31" id="SWY-4Q-b55"/>
+                                                <constraint firstAttribute="trailing" secondItem="dbc-63-OPU" secondAttribute="trailing" constant="31" id="YN7-fr-YFi"/>
+                                                <constraint firstItem="eYd-I2-1r9" firstAttribute="leading" secondItem="mcK-mg-8js" secondAttribute="leading" constant="31" id="aDC-Ns-kbW"/>
+                                                <constraint firstItem="dbc-63-OPU" firstAttribute="leading" secondItem="mcK-mg-8js" secondAttribute="leading" constant="265" id="aLi-ji-Vdr"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rsn-8R-UHx" secondAttribute="trailing" constant="38" id="bMA-pm-A1R"/>
+                                                <constraint firstItem="aT6-cJ-EOt" firstAttribute="leading" secondItem="mcK-mg-8js" secondAttribute="leading" constant="31" id="elb-Xh-JPC"/>
+                                                <constraint firstItem="eYd-I2-1r9" firstAttribute="top" secondItem="Rsn-8R-UHx" secondAttribute="bottom" constant="8" id="hV1-JM-4zb"/>
+                                                <constraint firstAttribute="trailing" secondItem="vxk-hb-7Co" secondAttribute="trailing" constant="38" id="ogn-uh-y1k"/>
+                                                <constraint firstItem="vxk-hb-7Co" firstAttribute="top" secondItem="mcK-mg-8js" secondAttribute="top" constant="31" id="qTf-6W-0bu"/>
+                                                <constraint firstItem="dbc-63-OPU" firstAttribute="top" secondItem="eYd-I2-1r9" secondAttribute="bottom" constant="8" id="roW-ps-29C"/>
+                                                <constraint firstItem="eYd-I2-1r9" firstAttribute="top" secondItem="Rsn-8R-UHx" secondAttribute="bottom" constant="8" id="woF-SP-aY8"/>
+                                                <constraint firstItem="aT6-cJ-EOt" firstAttribute="top" secondItem="vxk-hb-7Co" secondAttribute="bottom" constant="8" symbolic="YES" id="y1R-UP-h7p"/>
+                                                <constraint firstItem="vxk-hb-7Co" firstAttribute="leading" secondItem="mcK-mg-8js" secondAttribute="leading" constant="38" id="z1Q-cd-nfw"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="393" height="479"/>
+                                        <size key="customSize" width="393" height="475"/>
                                         <connections>
                                             <outlet property="calloriesExercise" destination="Rsn-8R-UHx" id="ePg-yb-XOB"/>
                                             <outlet property="deleteButton" destination="dbc-63-OPU" id="oQI-yL-Rlk"/>
-                                            <outlet property="imageExercise" destination="YCS-gV-fey" id="uF6-Oq-Wlu"/>
+                                            <outlet property="imageExercise" destination="vxk-hb-7Co" id="zpF-pK-GCz"/>
                                             <outlet property="nameExercise" destination="aT6-cJ-EOt" id="f0H-Ou-u0f"/>
                                             <outlet property="timeExercise" destination="eYd-I2-1r9" id="pZy-hG-xWB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="выполненные упражнения" translatesAutoresizingMaskIntoConstraints="NO" id="PUd-yN-PXO">
-                                <rect key="frame" x="0.0" y="117" width="393" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="PO6-zD-dIQ"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KcI-k6-r5L" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="7zN-yC-Oh8"/>
-                            <constraint firstItem="KcI-k6-r5L" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="9hk-Fo-HNB"/>
-                            <constraint firstItem="PUd-yN-PXO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="14" id="DvK-N1-shL"/>
-                            <constraint firstItem="KcI-k6-r5L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="M2w-Vh-OzZ"/>
-                            <constraint firstItem="KcI-k6-r5L" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="37" id="fbn-xK-7Rl"/>
-                            <constraint firstItem="PUd-yN-PXO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kWU-fD-yhb"/>
-                            <constraint firstItem="PUd-yN-PXO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="lOJ-Vf-xtn"/>
+                            <constraint firstItem="KcI-k6-r5L" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="b0S-q9-D96"/>
+                            <constraint firstItem="KcI-k6-r5L" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pkg-hE-xyc"/>
+                            <constraint firstItem="KcI-k6-r5L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rzH-Il-Rzb"/>
+                            <constraint firstItem="KcI-k6-r5L" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="wGc-aO-wD0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uym-RM-Hgc"/>
+                    <tabBarItem key="tabBarItem" title="" image="bookmark.fill" catalog="system" id="eJx-Ip-0UH"/>
+                    <navigationItem key="navigationItem" title="История упражнений" id="uym-RM-Hgc">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="Lzq-Lk-rC4"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="finishedExercisesCollectionView" destination="KcI-k6-r5L" id="8YC-A8-3Bf"/>
@@ -108,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="3325.9541984732823" y="-235.21126760563382"/>
         </scene>
-        <!--Calendar View Controller-->
+        <!--История упражнений-->
         <scene sceneID="64M-vy-IRq">
             <objects>
                 <viewController id="tKW-h5-eYb" customClass="CalendarViewController" customModule="Fitster" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,9 +128,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Ny-2q-LFs">
-                                <rect key="frame" x="0.0" y="142" width="393" height="607"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Ny-2q-LFs">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yQb-wu-KsJ">
                                     <size key="itemSize" width="393" height="48"/>
@@ -150,16 +161,20 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="выполненные упражнения" translatesAutoresizingMaskIntoConstraints="NO" id="d3j-Rh-r6R">
-                                <rect key="frame" x="0.0" y="103" width="393" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DdW-dt-zMd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Ny-2q-LFs" firstAttribute="top" secondItem="DdW-dt-zMd" secondAttribute="top" id="8kt-nQ-aMR"/>
+                            <constraint firstItem="3Ny-2q-LFs" firstAttribute="leading" secondItem="DdW-dt-zMd" secondAttribute="leading" id="AZV-Lg-Hfe"/>
+                            <constraint firstItem="3Ny-2q-LFs" firstAttribute="trailing" secondItem="DdW-dt-zMd" secondAttribute="trailing" id="eTz-LG-xVe"/>
+                            <constraint firstItem="3Ny-2q-LFs" firstAttribute="bottom" secondItem="DdW-dt-zMd" secondAttribute="bottom" id="rxg-1o-hvN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bookmark.fill" catalog="system" selectedImage="bookmark.fill" id="64a-yr-F9s"/>
-                    <navigationItem key="navigationItem" id="5bX-Is-n8A"/>
+                    <navigationItem key="navigationItem" title="История упражнений" id="5bX-Is-n8A">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="3wV-gF-O0X"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarCollectionView" destination="3Ny-2q-LFs" id="rif-f4-rKA"/>
@@ -193,8 +208,6 @@
     </scenes>
     <resources>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
-        <image name="Присед" width="1200" height="800"/>
-        <image name="выполненные упражнения" width="477" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

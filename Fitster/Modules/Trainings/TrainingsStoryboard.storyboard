@@ -4,12 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Trainings View Controller-->
+        <!--Тренировки-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="TrainingsStoryboard" id="Y6W-OH-hqX" customClass="TrainingsViewController" customModule="Fitster" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-4F-vNk">
-                                <rect key="frame" x="0.0" y="131" width="393" height="638"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TrainingsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrainingsTableViewCell" rowHeight="132" id="8Ww-cV-c3x" customClass="TrainingsTableViewCell" customModule="Fitster" customModuleProvider="target">
@@ -28,8 +29,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название тренировки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E89-QG-tqS">
-                                                    <rect key="frame" x="20" y="38" width="177" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название тренировки" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E89-QG-tqS">
+                                                    <rect key="frame" x="20" y="38" width="177" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -44,12 +45,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="1D3-qi-G37" firstAttribute="trailing" secondItem="1N7-WQ-x2E" secondAttribute="trailingMargin" id="3f7-07-vzq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="E89-QG-tqS" secondAttribute="bottom" constant="38" id="A53-RS-mcu"/>
                                                 <constraint firstItem="1D3-qi-G37" firstAttribute="top" secondItem="1N7-WQ-x2E" secondAttribute="topMargin" id="KvZ-Fe-C32"/>
-                                                <constraint firstItem="E89-QG-tqS" firstAttribute="top" secondItem="1N7-WQ-x2E" secondAttribute="topMargin" constant="27" id="cLQ-oK-KCR"/>
                                                 <constraint firstItem="E89-QG-tqS" firstAttribute="leading" secondItem="1N7-WQ-x2E" secondAttribute="leadingMargin" id="cd3-xu-yDD"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="1D3-qi-G37" secondAttribute="bottom" constant="3" id="flf-GV-5YS"/>
                                                 <constraint firstItem="1D3-qi-G37" firstAttribute="leading" secondItem="E89-QG-tqS" secondAttribute="trailing" constant="21" id="hDd-Tt-LFO"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="E89-QG-tqS" secondAttribute="bottom" constant="62" id="xas-9W-g31"/>
+                                                <constraint firstItem="E89-QG-tqS" firstAttribute="top" secondItem="1N7-WQ-x2E" secondAttribute="topMargin" constant="27" id="le9-6j-kr3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -60,26 +61,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тренировки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6j-1A-M8d">
-                                <rect key="frame" x="55" y="78" width="283" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LGb-4F-vNk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="00X-7L-zu7"/>
                             <constraint firstItem="LGb-4F-vNk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0e3-HP-Dos"/>
-                            <constraint firstItem="LGb-4F-vNk" firstAttribute="top" secondItem="D6j-1A-M8d" secondAttribute="bottom" constant="17" id="1kp-Iz-brS"/>
-                            <constraint firstItem="D6j-1A-M8d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="55" id="6RU-o1-3hw"/>
-                            <constraint firstItem="LGb-4F-vNk" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="dBO-98-zL6"/>
-                            <constraint firstItem="D6j-1A-M8d" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="78" id="e9Y-Gx-sba"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="D6j-1A-M8d" secondAttribute="trailing" constant="55" id="ke3-Mf-pv1"/>
+                            <constraint firstItem="LGb-4F-vNk" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="cDH-VK-NZt"/>
+                            <constraint firstItem="LGb-4F-vNk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kQB-8r-zYk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wbU-n7-DEN">
+                    <tabBarItem key="tabBarItem" title="" id="XId-Bz-KHa">
+                        <imageReference key="image" image="dumbbell.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Тренировки" largeTitleDisplayMode="always" id="wbU-n7-DEN">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="dgI-2Y-fhq"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -91,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="1072.5190839694656" y="-35.211267605633807"/>
         </scene>
-        <!--Exercises View Controller-->
+        <!--Упражнения-->
         <scene sceneID="8l7-O4-NaA">
             <objects>
                 <viewController id="zV3-h5-v8g" customClass="ExercisesViewController" customModule="Fitster" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Du4-EX-F2E">
-                                <rect key="frame" x="0.0" y="131" width="393" height="638"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TrainingsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExercisesTableViewCell" rowHeight="132" id="YSc-8D-bX7" customClass="ExercisesTableViewCell" customModule="Fitster" customModuleProvider="target">
@@ -110,8 +105,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название упражнения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bss-jl-iZc">
-                                                    <rect key="frame" x="20" y="38" width="180" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название упражнения" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bss-jl-iZc">
+                                                    <rect key="frame" x="20" y="38" width="180" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -125,13 +120,13 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Bss-jl-iZc" firstAttribute="top" secondItem="Tbz-bv-FCb" secondAttribute="topMargin" constant="27" id="A4G-dJ-UVc"/>
                                                 <constraint firstItem="443-4d-f6n" firstAttribute="top" secondItem="Tbz-bv-FCb" secondAttribute="topMargin" id="OVn-x9-cFe"/>
                                                 <constraint firstItem="Bss-jl-iZc" firstAttribute="leading" secondItem="Tbz-bv-FCb" secondAttribute="leadingMargin" id="QJM-JN-PRg"/>
                                                 <constraint firstItem="443-4d-f6n" firstAttribute="trailing" secondItem="Tbz-bv-FCb" secondAttribute="trailingMargin" id="Roo-xK-nfB"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="443-4d-f6n" secondAttribute="bottom" constant="3" id="bDN-wt-zUJ"/>
+                                                <constraint firstItem="Bss-jl-iZc" firstAttribute="top" secondItem="Tbz-bv-FCb" secondAttribute="topMargin" constant="27" id="jeW-ag-R9E"/>
                                                 <constraint firstItem="443-4d-f6n" firstAttribute="leading" secondItem="Bss-jl-iZc" secondAttribute="trailing" constant="18" id="oss-QW-J4R"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Bss-jl-iZc" secondAttribute="bottom" constant="62" id="s9a-eC-3q4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Bss-jl-iZc" secondAttribute="bottom" constant="38" id="sZg-fU-tRy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -142,27 +137,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvu-us-wfI">
-                                <rect key="frame" x="55" y="78" width="283" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hJd-3Z-zOB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wvu-us-wfI" firstAttribute="top" secondItem="u0L-nm-cdC" secondAttribute="top" constant="78" id="0aE-gk-fsq"/>
-                            <constraint firstItem="hJd-3Z-zOB" firstAttribute="trailing" secondItem="wvu-us-wfI" secondAttribute="trailing" constant="55" id="aqh-kj-05i"/>
-                            <constraint firstItem="Du4-EX-F2E" firstAttribute="top" secondItem="wvu-us-wfI" secondAttribute="bottom" constant="17" id="kUX-hD-z5j"/>
-                            <constraint firstItem="Du4-EX-F2E" firstAttribute="bottom" secondItem="hJd-3Z-zOB" secondAttribute="bottom" id="oKI-hK-RR5"/>
+                            <constraint firstItem="Du4-EX-F2E" firstAttribute="bottom" secondItem="hJd-3Z-zOB" secondAttribute="bottom" id="G8i-mc-kqy"/>
+                            <constraint firstItem="Du4-EX-F2E" firstAttribute="top" secondItem="hJd-3Z-zOB" secondAttribute="top" id="GWO-AO-qdr"/>
                             <constraint firstItem="Du4-EX-F2E" firstAttribute="leading" secondItem="hJd-3Z-zOB" secondAttribute="leading" id="p94-kR-3Gz"/>
-                            <constraint firstItem="wvu-us-wfI" firstAttribute="leading" secondItem="hJd-3Z-zOB" secondAttribute="leading" constant="55" id="tN0-IB-Gh6"/>
                             <constraint firstItem="Du4-EX-F2E" firstAttribute="trailing" secondItem="hJd-3Z-zOB" secondAttribute="trailing" id="xME-BS-vaf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="dumbbell.fill" catalog="system" id="Y0B-fI-uEN"/>
-                    <navigationItem key="navigationItem" id="TMb-V6-agN">
+                    <tabBarItem key="tabBarItem" title="" id="Y0B-fI-uEN">
+                        <imageReference key="image" image="dumbbell.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Упражнения" id="TMb-V6-agN">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="O5x-Zy-0D8"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -189,24 +177,33 @@
                                     <constraint firstAttribute="width" constant="317" id="psZ-OY-u6Y"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название упражнения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qo0-lE-bLU">
-                                <rect key="frame" x="54" y="383" width="285" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название упражнения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qo0-lE-bLU">
+                                <rect key="frame" x="54" y="370" width="285" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="285" id="v3t-RF-li3"/>
+                                    <constraint firstAttribute="height" constant="68" id="wwv-A4-2m8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание упражнения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vll-Yt-z6t">
-                                <rect key="frame" x="66" y="424" width="261" height="251"/>
+                                <rect key="frame" x="66" y="446" width="261" height="217"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="261" id="1iD-m6-zAs"/>
-                                    <constraint firstAttribute="height" constant="251" id="shx-kr-Wel"/>
+                                    <constraint firstAttribute="height" constant="217" id="51z-xm-L3l"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="261" id="6Iz-bc-1R3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtX-ro-Qxe">
-                                <rect key="frame" x="92" y="696" width="209" height="35"/>
+                                <rect key="frame" x="92" y="682" width="209" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Xyk-bk-zwR"/>
+                                    <constraint firstAttribute="width" constant="209" id="yES-AF-cMe"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Конец упражнения"/>
                                 <connections>
@@ -217,17 +214,18 @@
                         <viewLayoutGuide key="safeArea" id="u6n-m1-c2N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Vll-Yt-z6t" firstAttribute="top" secondItem="Qo0-lE-bLU" secondAttribute="bottom" constant="8" symbolic="YES" id="8Xz-yg-r08"/>
+                            <constraint firstItem="Vll-Yt-z6t" firstAttribute="top" secondItem="Qo0-lE-bLU" secondAttribute="bottom" constant="8" id="Cj0-c7-0ul"/>
                             <constraint firstItem="8xb-4x-PTq" firstAttribute="top" secondItem="u6n-m1-c2N" secondAttribute="top" constant="51" id="IyB-Nn-Rx1"/>
                             <constraint firstItem="u6n-m1-c2N" firstAttribute="trailing" secondItem="Vll-Yt-z6t" secondAttribute="trailing" constant="66" id="JJR-Qp-GOg"/>
                             <constraint firstItem="u6n-m1-c2N" firstAttribute="trailing" secondItem="Qo0-lE-bLU" secondAttribute="trailing" constant="54" id="K2e-32-faP"/>
                             <constraint firstItem="u6n-m1-c2N" firstAttribute="trailing" secondItem="8xb-4x-PTq" secondAttribute="trailing" constant="38" id="NI7-1p-8oS"/>
                             <constraint firstItem="u6n-m1-c2N" firstAttribute="trailing" secondItem="mtX-ro-Qxe" secondAttribute="trailing" constant="92" id="Nps-x6-z4R"/>
                             <constraint firstItem="8xb-4x-PTq" firstAttribute="leading" secondItem="u6n-m1-c2N" secondAttribute="leading" constant="38" id="Nsq-qG-6qA"/>
+                            <constraint firstItem="mtX-ro-Qxe" firstAttribute="top" secondItem="Vll-Yt-z6t" secondAttribute="bottom" constant="19" id="S4W-WU-cTU"/>
+                            <constraint firstItem="u6n-m1-c2N" firstAttribute="bottom" secondItem="mtX-ro-Qxe" secondAttribute="bottom" constant="52" id="ZTk-Rq-Ahv"/>
                             <constraint firstItem="Vll-Yt-z6t" firstAttribute="leading" secondItem="u6n-m1-c2N" secondAttribute="leading" constant="66" id="elE-1L-BQO"/>
                             <constraint firstItem="mtX-ro-Qxe" firstAttribute="leading" secondItem="u6n-m1-c2N" secondAttribute="leading" constant="92" id="j1Y-TY-B4E"/>
-                            <constraint firstItem="Qo0-lE-bLU" firstAttribute="top" secondItem="8xb-4x-PTq" secondAttribute="bottom" constant="30" id="jeC-nc-WJo"/>
-                            <constraint firstItem="mtX-ro-Qxe" firstAttribute="top" secondItem="Vll-Yt-z6t" secondAttribute="bottom" constant="21" id="mNC-OX-owD"/>
+                            <constraint firstItem="Qo0-lE-bLU" firstAttribute="top" secondItem="8xb-4x-PTq" secondAttribute="bottom" constant="17" id="kMa-P8-5PY"/>
                             <constraint firstItem="Qo0-lE-bLU" firstAttribute="leading" secondItem="u6n-m1-c2N" secondAttribute="leading" constant="54" id="tUH-Kk-iQ4"/>
                         </constraints>
                     </view>
